@@ -36,6 +36,7 @@ function grado() {
     } else if (grado == "4") {
         listaDeFormas = formasPriSegTerCuarto;
     }
+    return listaDeFormas;
 }
 
 // DEFINO LA LISTA DE FORMAS POR SEPARADO EN CASO DE SER NECESARIO
@@ -60,7 +61,7 @@ function soloGrado() {
 function elegirFormas() {
     const lista = grado();
     const listaSoloGrado = soloGrado();
-    const result = document.getElementById("result");
+    //const result = document.getElementById("result");
     const cantidad = document.querySelector(
         'input[name="cantidad"]:checked'
     ).value;
@@ -78,17 +79,17 @@ function elegirFormas() {
 
     if (cantidad == 2) {
         eleccion = lista[random];
-        result.innerText = `La forma elegida es ${eleccion}`;
+        //result.innerText = `La forma elegida es ${eleccion}`;
     } else if (cantidad == 3) {
         eleccion = `${lista[random]} y ${lista[random2]}`;
-        result.innerText = `Las formas elegidas son ${eleccion}`;
+        //result.innerText = `Las formas elegidas son ${eleccion}`;
     } else if (cantidad == 4) {
         eleccion = `${lista[random]} , ${lista[random2]} y ${lista[random3]}`;
-        result.innerText = `Las formas elegidas son ${eleccion}`;
+        //result.innerText = `Las formas elegidas son ${eleccion}`;
     } else if (cantidad == 0) {
         random = Math.floor(Math.random() * listaSoloGrado.length);
         eleccion = `${listaSoloGrado[random]}`;
-        result.innerText = `La forma elegida es ${eleccion}`;
+        //result.innerText = `La forma elegida es ${eleccion}`;
     } else if (cantidad == 1) {
         random = Math.floor(Math.random() * listaSoloGrado.length);
         while (listaSoloGrado[random] == lista[random2]) {
@@ -96,8 +97,9 @@ function elegirFormas() {
             random2 = Math.floor(Math.random() * lista.length);
         }
         eleccion = `${listaSoloGrado[random]} y ${lista[random2]}`;
-        result.innerText = `Las formas elegidas son ${eleccion}`;
+        //result.innerText = `Las formas elegidas son ${eleccion}`;
     }
+    return eleccion;
 }
 
 export default {

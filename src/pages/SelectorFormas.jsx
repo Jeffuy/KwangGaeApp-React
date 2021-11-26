@@ -1,6 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
+import selector from "@scripts/selector";
 
 const SelectorFormas = () => {
+    const [formas, setFormas] = useState("");
+    const choose = () => {
+        const formas = selector.elegirFormas();
+        setFormas(`Las formas elegidas son ${formas}`);
+    };
+
     return (
         <section>
             <div className="container mt-5">
@@ -159,6 +166,7 @@ const SelectorFormas = () => {
                             <button
                                 className="btn  btn-dark mt-5"
                                 type="button"
+                                onClick={choose}
                             >
                                 Elige las formas
                             </button>
@@ -166,10 +174,9 @@ const SelectorFormas = () => {
                     </div>
                 </form>
             </div>
-            <p
-                className="text-center fs-3 mt-5 mb-5 text-white"
-                id="result"
-            ></p>
+            <p className="text-center fs-3 mt-5 mb-5 text-white" id="result">
+                {formas}
+            </p>
         </section>
     );
 };
