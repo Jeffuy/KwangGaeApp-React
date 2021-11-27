@@ -9,8 +9,9 @@ const App = () => {
         <BrowserRouter>
             <Layout>
                 <Routes>
-                    <Route exact path="/" element={<SelectorFormas />} />
-                    <Route exact path="/lucha/" element={<Lucha />} />
+                    <Route exact path="/" element={<Lucha />} />
+                    <Route exact path="/selector" element={<SelectorFormas />} />
+                    <Route path="*" element={<div>404</div>} />
                 </Routes>
             </Layout>
         </BrowserRouter>

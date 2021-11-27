@@ -38,7 +38,7 @@ const Menu = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/arbitraje-lucha">
+                            <a className="nav-link" href="/lucha">
                                 <i className="fas fa-fist-raised" /> Arbitraje
                                 de Lucha
                             </a>
