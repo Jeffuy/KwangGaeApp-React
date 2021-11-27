@@ -45,6 +45,7 @@ module.exports = {
             {
                 test: /\.(css|scss)$/,
                 use: ["style-loader", "css-loader"],
+                exclude: /node_modules/,
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,

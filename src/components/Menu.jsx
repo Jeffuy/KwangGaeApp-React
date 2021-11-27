@@ -32,7 +32,7 @@ const Menu = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/selector-formas">
+                            <a className="nav-link" href="/selector">
                                 <i className="fas fa-random" /> Selector de
                                 formas
                             </a>

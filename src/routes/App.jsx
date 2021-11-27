@@ -10,7 +10,7 @@ const App = () => {
             <Layout>
                 <Routes>
                     <Route exact path="/" element={<Lucha />} />
-                    <Route exact path="/selectorForma" element={<SelectorFormas />} />
+                    <Route exact path="/selector" element={<SelectorFormas />} />
                     <Route path="*" element={<div>404</div>} />
                 </Routes>
             </Layout>
