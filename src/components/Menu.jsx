@@ -1,5 +1,6 @@
 import React from "react";
 import "@styles/main.css"
+import { NavLink } from "react-router-dom";
 
 const Menu = () => {
     return (
@@ -22,9 +23,9 @@ const Menu = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a className="nav-link" href="/">
+                            <NavLink className="nav-link" to="/">
                                 <i className="fas fa-home" /> Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/#about">
@@ -32,10 +33,10 @@ const Menu = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/selector">
+                            <NavLink className="nav-link" to="/selector">
                                 <i className="fas fa-random" /> Selector de
                                 formas
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/lucha">

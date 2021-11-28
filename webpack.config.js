@@ -8,7 +8,7 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
         publicPath: "./",
-        clean: true
+        clean: true,
     },
     mode: "production",
     resolve: {
@@ -22,8 +22,8 @@ module.exports = {
             "@logos": path.resolve(__dirname, "src/assets/logos/"),
             "@context": path.resolve(__dirname, "src/context/"),
             "@hooks": path.resolve(__dirname, "src/hooks/"),
-			"@scripts": path.resolve(__dirname, "src/scripts/"),
-        }
+            "@scripts": path.resolve(__dirname, "src/scripts/"),
+        },
     },
     module: {
         rules: [
@@ -32,9 +32,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
-                    
                 },
-                exclude: /node_modules/
             },
             {
                 test: /\.html$/,
@@ -52,7 +50,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 type: "asset",
-            }
+            },
         ],
     },
     plugins: [
