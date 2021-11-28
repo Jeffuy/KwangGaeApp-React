@@ -164,7 +164,7 @@ const Lucha = () => {
                                             : undefined;
                                     }}
                                 >
-                                    Advertencia
+                                    Advertenciadadadad
                                 </button>
                                 <button
                                     className="btn btn-danger btn-lg btn-block mb-2"

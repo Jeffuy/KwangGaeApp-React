@@ -7,7 +7,7 @@ const Menu = () => {
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/">
-                    Taekwon-Do I.T.F. App
+                    KwangGae App
                 </a>
                 <button
                     className="navbar-toggler"
@@ -28,9 +28,9 @@ const Menu = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/#about">
+                            <NavLink className="nav-link" to="/#about">
                                 <i className="fas fa-building" /> About
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/selector">
@@ -39,26 +39,26 @@ const Menu = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/lucha">
+                            <NavLink className="nav-link" to="/lucha">
                                 <i className="fas fa-fist-raised" /> Arbitraje
                                 de Lucha
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/arbitraje-forma">
+                            <NavLink className="nav-link" to="/forma">
                                 <i className="fas fa-calculator" /> Arbitraje de
                                 Forma
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/challenges">
+                            <NavLink className="nav-link" to="/desafios">
                                 <i className="fas fa-trophy" /> Challenges
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/cuestionario">
+                            <NavLink className="nav-link" to="/arbitraje">
                                 <i className="fas fa-list-ol" /> Cuestionario
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
