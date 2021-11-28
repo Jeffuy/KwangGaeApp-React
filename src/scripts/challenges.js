@@ -45,7 +45,7 @@ const challenge = [
 ];
 
 let puntosElegido;
-let challenges = []
+let challenges = [];
 
 function sumaPuntos(puntos) {
     let puntosTotales = JSON.parse(localStorage.getItem("puntosTotales"));
@@ -106,8 +106,8 @@ function getTasks() {
     if (localStorage.getItem("desafios") != null) {
         let desafios = JSON.parse(localStorage.getItem("desafios"));
         let puntos = JSON.parse(localStorage.getItem("puntos"));
-        
-		challenges = [];
+
+        challenges = [];
         for (let i = 0; i < desafios.length; i++) {
             let desafio = desafios[i];
             let punto = puntos[i];
