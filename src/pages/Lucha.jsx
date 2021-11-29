@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import timer from "@scripts/timer";
-
+import deductPoints from "@scripts/lucha";
 
 const Lucha = () => {
-    
     const theError = (
         <div
             className="card mb-4 text-center text-black"
@@ -19,58 +18,46 @@ const Lucha = () => {
     );
 
     const theError2 = (
-       
         <div
             className="card mb-4 text-center text-black"
             style={{ borderRadius: "0.3rem" }}
         >
             <div className="card-body">
                 <p>NO ES GRACIOSO IMBECIL</p>
-                <a
-                    className="btn btn-primary"
-                    onClick={() => setShowError(3)}
-                >
+                <a className="btn btn-primary" onClick={() => setShowError(3)}>
                     No volverá a ocurrir señor
                 </a>
             </div>
         </div>
-    )
+    );
 
     const theError3 = (
-       
         <div
             className="card mb-4 text-center bg-dark text-white"
             style={{ borderRadius: "0.3rem" }}
         >
             <div className="card-body">
                 <p>NO SABES ARBITRAR</p>
-                <a
-                    className="btn btn-primary"
-                    onClick={() => setShowError(4)}
-                >
+                <a className="btn btn-primary" onClick={() => setShowError(4)}>
                     Me arrodillo ante usted
                 </a>
             </div>
         </div>
-    )
+    );
 
     const theError4 = (
-       
         <div
             className="card mb-4 text-center text-white bg-danger"
             style={{ borderRadius: "0.3rem" }}
         >
             <div className="card-body">
                 <p>QUÉ SOS, CINTURÓN BLANCO?</p>
-                <a
-                    className="btn btn-dark"
-                    onClick={() => setShowError(5)}
-                >
+                <a className="btn btn-dark" onClick={() => setShowError(5)}>
                     Debería serlo por ser tan inutil
                 </a>
             </div>
         </div>
-    )
+    );
 
     const [time, setTime] = useState("Presiona Start");
     const [isRunning, setIsRunning] = useState("Combate sin iniciar");
@@ -142,29 +129,8 @@ const Lucha = () => {
     };
 
     const endFight = () => {
-        if (red.warnings >= 3 && red.warnings <= 5) {
-            red.score -= 1;
-        } else if (red.warnings >= 6 && red.warnings <= 8) {
-            red.score -= 2;
-        } else if (red.warnings >= 9 && red.warnings <= 11) {
-            red.score -= 3;
-        } else if (red.warnings >= 12 && red.warnings <= 14) {
-            red.score -= 4;
-        } else if (red.warnings >= 15 && red.warnings <= 17) {
-            red.score -= 5;
-        }
-
-        if (blue.warnings >= 3 && blue.warnings <= 5) {
-            blue.score -= 1;
-        } else if (blue.warnings >= 6 && blue.warnings <= 8) {
-            blue.score -= 2;
-        } else if (blue.warnings >= 9 && blue.warnings <= 11) {
-            blue.score -= 3;
-        } else if (blue.warnings >= 12 && blue.warnings <= 14) {
-            blue.score -= 4;
-        } else if (blue.warnings >= 15 && blue.warnings <= 17) {
-            blue.score -= 5;
-        }
+        red.score = red.score - deductPoints(red.warnings);
+        blue.score = blue.score - deductPoints(blue.warnings);
 
         setStatus(false);
         setIsRunning("Combate finalizado");
@@ -206,9 +172,7 @@ const Lucha = () => {
                     {showError == 2 && theError2}
                     {showError == 3 && theError3}
                     {showError == 4 && theError4}
-                    
-
-                    </div>
+                </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-6 mb-2">
