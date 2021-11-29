@@ -1,14 +1,15 @@
-import React from "react";
-import challenges from "@scripts/challenges.js";
-import GetChallenge from "@components/GetChallenge";
+import React, { useState } from "react";
+import desafios from "@scripts/challenges.js";
 
 const Challenge = () => {
-    const choose = () => {
-        challenges.elegirChallenge();
-    };
+	// LA SIGUIENTE LINEA NO SIRVE PERO NO SE PUEDE BORRAR
+    const [desafio, setDesafio] = useState("");
+    const cgs = desafios.renderOnScreen();
 
-    const desafio = () => {
-        challenges.saveTask();
+    const choose = () => {
+        desafios.elegirChallenge();
+		// LA SIGUIENTE LINEA NO SIRVE PERO NO SE PUEDE BORRAR
+        setDesafio(<></>);
     };
 
     return (
@@ -44,9 +45,7 @@ const Challenge = () => {
                 </div>
                 <div className="container-fluid">
                     <div className="col-md-8">
-                        <div id="desafios">
-                            <GetChallenge />
-                        </div>
+                        <div>{cgs}</div>
                     </div>
                 </div>
                 <div className="container-fluid mt-5">
@@ -54,7 +53,8 @@ const Challenge = () => {
                         <b>
                             <a
                                 className="badge bg-danger"
-                                onClick={() => resetPoints}                            >
+                                onClick={() => resetPoints}
+                            >
                                 Reiniciar puntos
                             </a>{" "}
                             (esta opción no se puede deshacer)

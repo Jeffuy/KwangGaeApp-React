@@ -1,3 +1,4 @@
+import React from "react";
 //DEFINO LOS DESAFIOS
 const challenge = [
     { "6 puntos con dollyo": 2 },
@@ -46,6 +47,7 @@ const challenge = [
 
 let puntosElegido;
 let challenges = [];
+let cgs = "adasd";
 
 function sumaPuntos(puntos) {
     let puntosTotales = JSON.parse(localStorage.getItem("puntosTotales"));
@@ -136,6 +138,52 @@ function endTask(posicion, status) {
     getTasks();
 }
 
+const failed = () => {
+    console.log("Failed to load challenges");
+};
+
+const achieved = () => {
+    console.log("ASDadasdad to load challenges");
+};
+
+const renderOnScreen = () => {
+    cgs = (
+        <>
+            {challenges.length !== 0 ? (
+                challenges.map((challenge) => (
+                    <div
+                        className="card mb-4 text-center text-black"
+                        style={{ borderRadius: "0.3rem" }}
+                        key={challenge.id}
+                    >
+                        <div className="card-body">
+                            <p>Tienes que hacer {challenge.task} .</p>
+                            <p>
+                                <b>RECOMPENSA: {challenge.points} puntos</b>
+                            </p>
+                            <a
+                                onClick={() => failed()}
+                                className="btn btn-danger"
+                            >
+                                Fallado
+                            </a>
+                            <a
+                                onClick={() => achieved()}
+                                className="btn btn-primary"
+                            >
+                                Completado
+                            </a>
+                        </div>
+                    </div>
+                ))
+            ) : (
+                <p>No hay desafíos</p>
+            )}
+        </>
+    );
+    return cgs;
+};
+
 getTasks();
 sumaPuntos(0);
 
@@ -147,4 +195,7 @@ export default {
     puntosElegido,
     challenge,
     challenges,
+    failed,
+    renderOnScreen,
+    cgs,
 };
