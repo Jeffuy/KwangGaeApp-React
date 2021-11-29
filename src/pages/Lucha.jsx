@@ -1,8 +1,80 @@
 import React, { useState } from "react";
 import timer from "@scripts/timer";
+import NotStart from "@components/NotStart";
 
 const Lucha = () => {
+    
+    const theError = (
+        <div
+            className="card mb-4 text-center text-black"
+            style={{ borderRadius: "0.3rem" }}
+        >
+            <div className="card-body">
+                <p>PELOTUDO! TOCA START PRIMERO INFELIZ</p>
+                <a className="btn btn-danger" onClick={() => setShowError(2)}>
+                    Perdón, mala mía
+                </a>
+            </div>
+        </div>
+    );
+
+    const theError2 = (
+       
+        <div
+            className="card mb-4 text-center text-black"
+            style={{ borderRadius: "0.3rem" }}
+        >
+            <div className="card-body">
+                <p>NO ES GRACIOSO IMBECIL</p>
+                <a
+                    className="btn btn-primary"
+                    onClick={() => setShowError(3)}
+                >
+                    No volverá a ocurrir señor
+                </a>
+            </div>
+        </div>
+    )
+
+    const theError3 = (
+       
+        <div
+            className="card mb-4 text-center bg-dark text-white"
+            style={{ borderRadius: "0.3rem" }}
+        >
+            <div className="card-body">
+                <p>NO SABES ARBITRAR</p>
+                <a
+                    className="btn btn-primary"
+                    onClick={() => setShowError(4)}
+                >
+                    Me arrodillo ante usted
+                </a>
+            </div>
+        </div>
+    )
+
+    const theError4 = (
+       
+        <div
+            className="card mb-4 text-center text-white bg-danger"
+            style={{ borderRadius: "0.3rem" }}
+        >
+            <div className="card-body">
+                <p>QUÉ SOS, CINTURÓN BLANCO?</p>
+                <a
+                    className="btn btn-dark"
+                    onClick={() => setShowError(5)}
+                >
+                    Debería serlo por ser tan inutil
+                </a>
+            </div>
+        </div>
+    )
+
     const [time, setTime] = useState("Presiona Start");
+    const [isRunning, setIsRunning] = useState("Combate sin iniciar");
+    const [showError, setShowError] = useState(0);
     const [runTime, setRunTime] = useState("");
     const [status, setStatus] = useState(false);
     const [red, setRed] = useState({
@@ -45,6 +117,7 @@ const Lucha = () => {
 
     const startFight = () => {
         timer.start();
+        setIsRunning("Combate iniciado");
         setStatus(true);
 
         setBlue({
@@ -94,11 +167,10 @@ const Lucha = () => {
         }
 
         setStatus(false);
+        setIsRunning("Combate finalizado");
         setRunTime(clearInterval(runTime));
         setTime(time);
         timer.reset();
-
-
 
         console.log(red, blue);
     };
@@ -107,7 +179,7 @@ const Lucha = () => {
         <section>
             <div className="container">
                 <h3 className="mt-2 text-center text-white" id="status">
-                    Combate terminado
+                    {isRunning}
                 </h3>
             </div>
             <div className="container">
@@ -130,6 +202,14 @@ const Lucha = () => {
                     </div>
                 </div>
                 <div className="container">
+                    {showError == 1 && theError}
+                    {showError == 2 && theError2}
+                    {showError == 3 && theError3}
+                    {showError == 4 && theError4}
+                    
+
+                    </div>
+                <div className="container">
                     <div className="row">
                         <div className="col-6 mb-2">
                             <div className="btn-group-vertical">
@@ -143,7 +223,7 @@ const Lucha = () => {
                                                   score: red.score + 1,
                                                   last: 1,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Golpe de puño
@@ -158,7 +238,7 @@ const Lucha = () => {
                                                   score: red.score + 2,
                                                   last: 2,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Patada zona media
@@ -173,7 +253,7 @@ const Lucha = () => {
                                                   score: red.score + 3,
                                                   last: 3,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Patada zona alta
@@ -187,7 +267,7 @@ const Lucha = () => {
                                                   ...red,
                                                   warnings: red.warnings + 1,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Advertencia
@@ -203,7 +283,7 @@ const Lucha = () => {
                                                   last: -1,
                                                   discounts: red.discounts + 1,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Punto en contra
@@ -217,7 +297,6 @@ const Lucha = () => {
                                 </button>
                                 <button
                                     className="btn btn-dark btn-lg btn-block mt-3 mb-1 shadow-none"
-                                    
                                     type="button"
                                     onClick={
                                         status ? undefined : () => startFight()
@@ -239,7 +318,7 @@ const Lucha = () => {
                                                   score: blue.score + 1,
                                                   last: 1,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Golpe de puño
@@ -254,7 +333,7 @@ const Lucha = () => {
                                                   score: blue.score + 2,
                                                   last: 2,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Patada zona media
@@ -269,7 +348,7 @@ const Lucha = () => {
                                                   score: blue.score + 3,
                                                   last: 3,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Patada zona alta
@@ -283,7 +362,7 @@ const Lucha = () => {
                                                   ...blue,
                                                   warnings: blue.warnings + 1,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Advertencia
@@ -299,7 +378,7 @@ const Lucha = () => {
                                                   last: -1,
                                                   discounts: blue.discounts + 1,
                                               })
-                                            : undefined;
+                                            : setShowError(true);
                                     }}
                                 >
                                     Punto en contra
@@ -313,7 +392,6 @@ const Lucha = () => {
                                 </button>
                                 <button
                                     className="btn btn-dark btn-lg btn-block mt-3 mb-1 shadow-none"
-                                    
                                     type="button"
                                     onClick={() => endFight()}
                                 >
@@ -324,9 +402,7 @@ const Lucha = () => {
                     </div>
                     <div className="text-center row mb-5 text-white">
                         <div className="col-12">
-                            <span style={{ fontSize: 20 }}>
-                                {time}
-                            </span>
+                            <span style={{ fontSize: 20 }}>{time}</span>
                         </div>
                     </div>
                 </div>
