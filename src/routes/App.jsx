@@ -5,7 +5,7 @@ import SelectorFormas from "@pages/SelectorFormas";
 import Lucha from "@pages/Lucha";
 import Home from "@pages/Home";
 import Challenge from "@pages/Challenge";
-import NotStart from "@components/NotStart";
+
 
 const App = () => {
     return (

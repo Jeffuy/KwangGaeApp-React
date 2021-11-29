@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import timer from "@scripts/timer";
-import NotStart from "@components/NotStart";
+
 
 const Lucha = () => {
     
