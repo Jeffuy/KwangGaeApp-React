@@ -74,25 +74,7 @@ const Quiz = () => {
                 { answerText: "A la de la nariz", isCorrect: false },
                 { answerText: "A la del cinturón", isCorrect: false },
             ],
-        },
-        {
-            questionText: "¿Cuantas nudos lleva el cinto del dobok?",
-            answerOptions: [
-                { answerText: "1", isCorrect: false },
-                { answerText: "2", isCorrect: true },
-                { answerText: "3", isCorrect: false },
-                { answerText: "Todos los que pueda", isCorrect: false },
-            ],
-        },
-        {
-            questionText: "¿Cuantas nudos lleva el cinto del dobok?",
-            answerOptions: [
-                { answerText: "1", isCorrect: false },
-                { answerText: "2", isCorrect: true },
-                { answerText: "3", isCorrect: false },
-                { answerText: "Todos los que pueda", isCorrect: false },
-            ],
-        },
+        }
     ];
 	const [grado, setGrado] = useState("Cinturón blanco");
     const [currentQuestion, setCurrentQuestion] = useState(0);
