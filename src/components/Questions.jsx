@@ -24,20 +24,23 @@ const Questions = (props) => {
 				<h1>{props.grado}</h1>
 			</div>
 			<div className="app">
-				<div className="question-section">
-					<div className="question-count">
-						<span>Pregunta {props.currentQuestion + 1}</span>/
+			<div className="container">
+				<div className="row">
+					<div className="col">
+						<span className="fs-4">Pregunta {props.currentQuestion + 1}</span>/
 						{props.questions.length}
 					</div>
-					<div className="question-text">
+					<div className="row">
+					<div className="col text-center mt-2 fs-4">
 						{props.questions[props.currentQuestion].questionText}
 					</div>
+					</div>
 				</div>
-				<div className="answer-section">
+				<div className="answer-section mt-4">
 					{props.questions[props.currentQuestion].answerOptions.map(
 						(answerOption) => (
 							<button
-								className="quiz-button mt-2"
+								className="btn btn-dark mt-3"
 								key={answerOption.answerText}
 								onClick={() =>
 									props.handleAnswerOptionClick(
@@ -50,6 +53,7 @@ const Questions = (props) => {
 						)
 					)}
 				</div>
+			</div>
 			</div>
 		</>
 	)}
