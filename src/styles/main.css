@@ -12,3 +12,10 @@ body {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
+
+.save_button {
+	min-width: 80px;
+	max-width: 80px;
+	min-height: 80px;
+	max-height: 80px;
+}

@@ -56,7 +56,7 @@ const Menu = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/arbitraje">
+                            <NavLink className="nav-link" to="/quiz">
                                 <i className="fas fa-list-ol" /> Cuestionario
                             </NavLink>
                         </li>
