@@ -1,16 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import GetChallenge from "@components/GetChallenge";
+
 import desafios from "@scripts/challenges.js";
 
-const Challenge = () => {
-	// LA SIGUIENTE LINEA NO SIRVE PERO NO SE PUEDE BORRAR
-    const [desafio, setDesafio] = useState("");
-    const cgs = desafios.renderOnScreen();
+const Challenge = (props) => {
+    const [puntosTotales, setPuntosTotales] = useState(
+        JSON.parse(localStorage.getItem("puntosTotales"))
+    );
+    const [desafio, setDesafio] = useState(desafios.renderOnScreen());
+    //const [desafio, setDesafio] = useState(<GetChallenge />);
+
+    //setDesafio(setInterval("Hola"), 10000);
+    // useEffect(() => {
+    //     console.log("Hola");
+    // }, [desafio]);
+
+    const hola = () => {
+        return console.log("Hola");
+    };
 
     const choose = () => {
         desafios.elegirChallenge();
-		// LA SIGUIENTE LINEA NO SIRVE PERO NO SE PUEDE BORRAR
-        setDesafio(<></>);
+        setDesafio(desafios.renderOnScreen());
+        setPuntosTotales(JSON.parse(localStorage.getItem("puntosTotales")));
     };
+
+    //<GetChallenge hola={hola}/>;
 
     return (
         <>
@@ -20,6 +35,7 @@ const Challenge = () => {
                         className="text-center fs-5 mt-3 text-white"
                         id="puntos"
                     />
+                    {puntosTotales}
                     <div className="container">
                         <div className="row  justify-content-center    ">
                             <button
@@ -42,11 +58,10 @@ const Challenge = () => {
                             ></p>
                         </div>
                     </div>
+                    <div>{desafio}</div>
                 </div>
                 <div className="container-fluid">
-                    <div className="col-md-8">
-                        <div>{cgs}</div>
-                    </div>
+                    <div className="col-md-8"></div>
                 </div>
                 <div className="container-fluid mt-5">
                     <p className="text-center fs-6 mt-5 text-danger">

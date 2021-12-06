@@ -9,51 +9,12 @@ const Lucha = () => {
             style={{ borderRadius: "0.3rem" }}
         >
             <div className="card-body">
-                <p>PELOTUDO! TOCA START PRIMERO INFELIZ</p>
-                <a className="btn btn-danger" onClick={() => setShowError(2)}>
-                    Perdón, mala mía
-                </a>
-            </div>
-        </div>
-    );
-
-    const theError2 = (
-        <div
-            className="card mb-4 text-center text-black"
-            style={{ borderRadius: "0.3rem" }}
-        >
-            <div className="card-body">
-                <p>NO ES GRACIOSO IMBECIL</p>
-                <a className="btn btn-primary" onClick={() => setShowError(3)}>
-                    No volverá a ocurrir señor
-                </a>
-            </div>
-        </div>
-    );
-
-    const theError3 = (
-        <div
-            className="card mb-4 text-center bg-dark text-white"
-            style={{ borderRadius: "0.3rem" }}
-        >
-            <div className="card-body">
-                <p>NO SABES ARBITRAR</p>
-                <a className="btn btn-primary" onClick={() => setShowError(4)}>
-                    Me arrodillo ante usted
-                </a>
-            </div>
-        </div>
-    );
-
-    const theError4 = (
-        <div
-            className="card mb-4 text-center text-white bg-danger"
-            style={{ borderRadius: "0.3rem" }}
-        >
-            <div className="card-body">
-                <p>QUÉ SOS, CINTURÓN BLANCO?</p>
-                <a className="btn btn-dark" onClick={() => setShowError(5)}>
-                    Debería serlo por ser tan inutil
+                <p>DEBES APRETAR START PARA EMPEZAR A PUNTUAR</p>
+                <a
+                    className="btn btn-danger"
+                    onClick={() => setShowError(false)}
+                >
+                    Ok
                 </a>
             </div>
         </div>
@@ -61,7 +22,7 @@ const Lucha = () => {
 
     const [time, setTime] = useState("Presiona Start");
     const [isRunning, setIsRunning] = useState("Combate sin iniciar");
-    const [showError, setShowError] = useState(0);
+    const [showError, setShowError] = useState(false);
     const [runTime, setRunTime] = useState("");
     const [status, setStatus] = useState(false);
     const [red, setRed] = useState({
@@ -141,6 +102,10 @@ const Lucha = () => {
         console.log(red, blue);
     };
 
+    const pruebita = () => {
+        console.log("hola");
+    };
+
     return (
         <section>
             <div className="container">
@@ -167,12 +132,7 @@ const Lucha = () => {
                         </p>
                     </div>
                 </div>
-                <div className="container">
-                    {showError == 1 && theError}
-                    {showError == 2 && theError2}
-                    {showError == 3 && theError3}
-                    {showError == 4 && theError4}
-                </div>
+                <div className="container">{showError == 1 && theError}</div>
                 <div className="container">
                     <div className="row">
                         <div className="col-6 mb-2">

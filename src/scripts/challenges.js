@@ -48,14 +48,17 @@ const challenge = [
 let puntosElegido;
 let challenges = [];
 let cgs = "adasd";
+let suma;
 
 function sumaPuntos(puntos) {
     let puntosTotales = JSON.parse(localStorage.getItem("puntosTotales"));
-    let suma = parseInt(puntosTotales + puntos);
+    suma = parseInt(puntosTotales + puntos);
     if (suma < 0) {
         suma = 0;
     }
     localStorage.setItem("puntosTotales", JSON.stringify(suma));
+
+	return suma;
 
     //let puntosView = document.getElementById("puntos");
     //puntosView.innerHTML = `Hasta ahora has conseguido ${suma} puntos.`
@@ -136,6 +139,7 @@ function endTask(posicion, status) {
     localStorage.setItem("desafios", JSON.stringify(desafios));
     localStorage.setItem("puntos", JSON.stringify(puntos));
     getTasks();
+	renderOnScreen()
 }
 
 const failed = () => {
@@ -145,6 +149,8 @@ const failed = () => {
 const achieved = () => {
     console.log("ASDadasdad to load challenges");
 };
+
+// Muestra los desafios actuales en pantalla
 
 const renderOnScreen = () => {
     cgs = (
@@ -162,13 +168,13 @@ const renderOnScreen = () => {
                                 <b>RECOMPENSA: {challenge.points} puntos</b>
                             </p>
                             <a
-                                onClick={() => failed()}
+                                onClick={() => hola()}
                                 className="btn btn-danger"
                             >
                                 Fallado
                             </a>
                             <a
-                                onClick={() => achieved()}
+                                onClick={() => endTask(challenge.id, "true")}
                                 className="btn btn-primary"
                             >
                                 Completado
@@ -198,4 +204,5 @@ export default {
     failed,
     renderOnScreen,
     cgs,
+	suma,
 };
