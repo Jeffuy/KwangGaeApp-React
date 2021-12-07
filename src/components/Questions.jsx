@@ -1,4 +1,5 @@
 import React from 'react'
+import {imgList} from "@scripts/data/quizImg"
 
 const Questions = (props) => {
 	
@@ -7,12 +8,13 @@ const Questions = (props) => {
 		<div className="container">
 			{props.showScore ? (
 		<><div className="app">
-					<div className="score-section">
+					<div className="row"><img className="img-fluid" src={imgList[props.score]} alt="" /></div>
+				</div><div className="container-fluid mt-4"><div className="row"><div className="col">
+				<div className="text-center fs-2">
 						Tu puntaje fue de {props.score} sobre {props.questions.length}
 					</div>
-				</div><div className="container-fluid"><div className="row"><div className="col-6 offset-4">
 						<button
-							className="btn text-white bg-dark save_button"
+							className="btn btn-dark form-control mt-4"
 							onClick={() => props.back()}
 						>
 							Volver
@@ -59,7 +61,7 @@ const Questions = (props) => {
 	)}
 		</div>
 	)} else {
-		return <h2 className="text-center mt-4">Elige tu Quiz</h2>
+		return <div></div>
 	}
 }
 
