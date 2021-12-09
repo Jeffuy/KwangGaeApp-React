@@ -1,61 +1,22 @@
 import React, { useState, useEffect } from "react";
 import style from "@styles/quiz.css";
-import quizQuestions from "@scripts/data/quizQuestions";
+import { questionList } from "@scripts/data/quizQuestions";
 import QuizChooser from "@components/QuizChooser";
 import Questions from "@components/Questions";
+import { imgList, imgTitle } from "@scripts/data/quizImg";
 
 const Quiz = (props) => {
-
-	const [grado, setGrado] = useState(null);
+    const [grado, setGrado] = useState(null);
     const [questions, setQuestions] = useState(null);
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
     const [visible, setVisible] = useState(false);
-	const [title, setTitle] = useState(null);
+    const [title, setTitle] = useState(null);
+    const [imgTitleSetter, setImgTitleSetter] = useState(imgTitle);
 
-    // const visible = showScore ? (
-    // 	<div className="app">
-    // 		<div className="score-section">
-    // 			Tu puntaje fue de {score} sobre {questions.length}
-    // 		</div>
-    // 	</div>
-    // ) : (
-    // 	<>
-    // 		{" "}
-    // 		<div className="container-fluid mt-3">
-    // 			<h1>{grado}</h1>
-    // 		</div>
-    // 		<div className="app">
-    // 			<div className="question-section">
-    // 				<div className="question-count">
-    // 					<span>Pregunta {currentQuestion + 1}</span>/
-    // 					{questions.length}
-    // 				</div>
-    // 				<div className="question-text">
-    // 					{questions[currentQuestion].questionText}
-    // 				</div>
-    // 			</div>
-    // 			<div className="answer-section">
-    // 				{questions[currentQuestion].answerOptions.map(
-    // 					(answerOption) => (
-    // 						<button
-    // 							className="quiz-button"
-    // 							key={answerOption.answerText}
-    // 							onClick={() =>
-    // 								handleAnswerOptionClick(
-    // 									answerOption.isCorrect
-    // 								)
-    // 							}
-    // 						>
-    // 							{answerOption.answerText}
-    // 						</button>
-    // 					)
-    // 				)}
-    // 			</div>
-    // 		</div>
-    // 	</>
-    // )
+	const pruebita = () => {
+		return imgTitleSetter}
 
     const handleAnswerOptionClick = (isCorrect) => {
         if (isCorrect) {
@@ -70,23 +31,27 @@ const Quiz = (props) => {
         }
     };
 
-    function quizChoose(choice, title) {
+    function quizChoose(choice, index) {
         setGrado(choice);
-		setTitle(title);
-		if (choice === "white") {
-			setQuestions(quizQuestions.questionsWhite);
-		} else if (choice === "umpire")
-		setQuestions(quizQuestions.questionsUmpire);
+		setQuestions(questionList[index]);
+		setImgTitleSetter(imgTitle[index]);
 
+        // if (choice === "white") {
+        //     setQuestions(quizQuestions.questionsWhite);
+        //     setImgTitleSetter(imgTitle[0]);
+        // } else if (choice === "umpire") {
+        //     setQuestions(quizQuestions.questionsUmpire);
+        //     setImgTitleSetter(imgTitle[1]);
+        // }
     }
-	const back = () => {
-		setQuestions(null)
-		setGrado(null);
-		setScore(0);
-		setCurrentQuestion(0);
-		setShowScore(false);
-		setTitle(null)
-	}
+    const back = () => {
+        setQuestions(null);
+        setGrado(null);
+        setScore(0);
+        setCurrentQuestion(0);
+        setShowScore(false);
+        setTitle(null);
+    };
     useEffect(() => {
         setVisible(true);
     }, [questions]);
@@ -95,7 +60,7 @@ const Quiz = (props) => {
         <div className="d-flex flex-column min-vh-100">
             {grado == null && <QuizChooser quizChoose={quizChoose} />}
             <div>
-				<h1 className="mt-4">{title}</h1>
+                <h1 className="mt-4">{!showScore && title}</h1>
                 {visible && (
                     <Questions
                         questions={questions}
@@ -103,7 +68,9 @@ const Quiz = (props) => {
                         currentQuestion={currentQuestion}
                         score={score}
                         showScore={showScore}
-						back={back}
+                        back={back}
+                        imgList={imgList}
+						pruebita={pruebita}
                     />
                 )}
             </div>
