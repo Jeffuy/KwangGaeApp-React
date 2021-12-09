@@ -114,7 +114,7 @@ const questionsWhite = [
         ],
     },
     {
-        questionText: "Cuál de estás opciones es falsa?",
+        questionText: "¿Cuál de estás opciones es falsa?",
         answerOptions: [
             {
                 answerText: "La cruz de defensa tiene 8 movimientos",
@@ -277,7 +277,7 @@ const questionsYellowStripe = [
         ],
     },
     {
-        questionText: "Cuántos años cumplirá el Taekwon-Do en 2022?",
+        questionText: "¿Cuántos años cumplirá el Taekwon-Do en 2022?",
         answerOptions: [
             {
                 answerText: "67",
@@ -302,138 +302,138 @@ const questionsYellowStripe = [
 
 const questionsYellow = [
     {
-        questionText: "¿En qué país se creó el Taekwon-Do?",
+        questionText: "¿A qué altura se realizan los puños en Dangun?",
         answerOptions: [
-            { answerText: "Japon", isCorrect: false },
-            { answerText: "China", isCorrect: false },
-            { answerText: "Corea", isCorrect: true },
-            { answerText: "Uruguay", isCorrect: false },
+            { answerText: "Media", isCorrect: false },
+            { answerText: "Alta", isCorrect: true },
+            { answerText: "Baja", isCorrect: false },
+            { answerText: "Depende cual puño", isCorrect: false },
         ],
     },
     {
-        questionText: "¿En que año se creó el Taekwon-Do?",
+        questionText: "¿En que moción se realizan los movimientos 13 y 14 de Dangun?",
         answerOptions: [
-            { answerText: "1325", isCorrect: false },
-            { answerText: "1955", isCorrect: true },
-            { answerText: "1980", isCorrect: false },
-            { answerText: "1936", isCorrect: false },
+            { answerText: "Rápida", isCorrect: false },
+            { answerText: "Normal", isCorrect: false },
+            { answerText: "Natural", isCorrect: false },
+            { answerText: "Continua", isCorrect: true },
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿Cuántos movimientos tiene Dangun?",
         answerOptions: [
-            { answerText: "7", isCorrect: true },
-            { answerText: "8", isCorrect: false },
-            { answerText: "12", isCorrect: false },
-            { answerText: "6", isCorrect: false },
+            { answerText: "21", isCorrect: true },
+            { answerText: "19", isCorrect: false },
+            { answerText: "20", isCorrect: false },
+            { answerText: "24", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Cuántos nudos lleva el cinto del dobok?",
+        questionText: "¿Cuántos puntos vale una patada en la cabeza en un torneo?",
         answerOptions: [
             { answerText: "1", isCorrect: false },
+            { answerText: "2", isCorrect: false },
+            { answerText: "3", isCorrect: true },
+            { answerText: "Advertencia", isCorrect: false },
+        ],
+    },
+    {
+        questionText:
+            "¿Cuántos oponentes me atacan en el movimiento 9 de Dangun?",
+        answerOptions: [
             { answerText: "2", isCorrect: true },
+            { answerText: "Ninguno, yo soy el que ataca", isCorrect: false },
+            { answerText: "1", isCorrect: false },
             { answerText: "3", isCorrect: false },
-            { answerText: "Todos los que pueda", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Qué representa el color amarillo en el cinturón?",
+        answerOptions: [
+            { answerText: "El sol, que nos da energía", isCorrect: false },
+            { answerText: "La semilla, que se planta en la tierra", isCorrect: true },
+            { answerText: "Nada. Simplemente es un color más", isCorrect: false },
+            { answerText: "El brillo de uno mismo en el Taekwon-Do", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cuál de estas posiciones no aparece en Dangun",
+        answerOptions: [
+            { answerText: "Gunun sogi", isCorrect: false },
+            {
+                answerText: "Narani Sogi",
+                isCorrect: false,
+            },
+            { answerText: "Niunja Sogi", isCorrect: false },
+            { answerText: "Annun Sogi", isCorrect: true },
         ],
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿Cuál es la diferencia entre hacer un bloqueo con mano abierta y cerrada?",
         answerOptions: [
-            { answerText: "Jumbi", isCorrect: false },
-            { answerText: "Posición de forma", isCorrect: false },
-            { answerText: "Posición de ataque", isCorrect: false },
-            { answerText: "Gunnun sogi", isCorrect: true },
+            { answerText: "La parte del cuerpo con la que se defiende", isCorrect: true },
+            { answerText: "La velocidad con la que debe realizarse la técnica", isCorrect: false },
+            { answerText: "La posición que debe usarse", isCorrect: false },
+            { answerText: "No hay diferencia", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Cúal de estos no es un principio del Taekwon-Do?",
+        questionText: "¿Quién era Dangun?",
         answerOptions: [
-            { answerText: "Cortesía", isCorrect: false },
-            { answerText: "Perseverancia", isCorrect: false },
-            { answerText: "Paciencia", isCorrect: true },
-            { answerText: "Espíritu indomable", isCorrect: false },
+            { answerText: "El legendario guerrero de Corea ", isCorrect: false },
+            { answerText: "El legendario creador del Taekwon-Do", isCorrect: false },
+            { answerText: "El legendario gladiador de Asia", isCorrect: false },
+            { answerText: "El legendario fundador de Corea", isCorrect: true },
         ],
     },
     {
-        questionText: "Una persona tiene integridad cuando...",
+        questionText: '¿En qué orden se hace fila en la clase?',
         answerOptions: [
-            { answerText: "...sabe integrarse a un grupo", isCorrect: false },
-            {
-                answerText: "...sabe diferenciar lo correcto de lo incorrecto",
-                isCorrect: true,
-            },
-            { answerText: "...miente muy seguido", isCorrect: false },
-            { answerText: "...nunca se rinde", isCorrect: false },
+            { answerText: "Orden de cinturón", isCorrect: true },
+            { answerText: "Orden de altura", isCorrect: false },
+            { answerText: "Orden de edad", isCorrect: false },
+            { answerText: "Orden alfábetico coreano", isCorrect: false },
         ],
     },
     {
-        questionText:
-            "¿A qué altura va la mano que defiende al realizar una defensa media?",
-        answerOptions: [
-            { answerText: "A la boca del estómago ", isCorrect: false },
-            { answerText: "A la del hombro", isCorrect: true },
-            { answerText: "A la de la nariz", isCorrect: false },
-            { answerText: "A la del cinturón", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Quién es el creador del Taekwon-Do?",
-        answerOptions: [
-            { answerText: "Chang Yong Sae ", isCorrect: false },
-            { answerText: "Dong Qui Kong", isCorrect: false },
-            { answerText: "Choi Hong Hi", isCorrect: true },
-            { answerText: "Juan Pedro Veiga", isCorrect: false },
-        ],
-    },
-    {
-        questionText: 'Si el profesor me dice "Charyot"; ¿qué estoy por hacer?',
-        answerOptions: [
-            { answerText: "Saludar", isCorrect: true },
-            { answerText: "Golpear", isCorrect: false },
-            { answerText: "Practicar la forma", isCorrect: false },
-            { answerText: "Comenzar un trabajo", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Qué debo hacer si una técnica no me sale?",
+        questionText: "¿Cuál de estos no es un buen consejo para rotura?",
         answerOptions: [
             {
-                answerText: "Buscar excusas para no tener que hacerla",
+                answerText: "Debes golpear en el medio de la madera",
                 isCorrect: false,
             },
             {
-                answerText: "Seguir practicándola exactamente igual",
+                answerText: "Debes asegurarte que la altura de la madera sea correcta antes de golpear",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Pensar la razón por la que no me sale y corregir ese detalle",
-                isCorrect: true,
+                    "Debes generar velocidad y asegurarte de usar la técnica correcta",
+                isCorrect: false,
             },
-            { answerText: "Intentar no tener que hacerla", isCorrect: false },
+            { answerText: "Debes hacerlo lo mas rápido posible y solo preocuparte por pegar bien fuerte", isCorrect: true },
         ],
     },
     {
-        questionText: "Cuál de estás opciones es falsa?",
+        questionText: "¿Cuál de estos es un ejemplo de cortesía?",
         answerOptions: [
             {
-                answerText: "La cruz de defensa tiene 8 movimientos",
-                isCorrect: false,
+                answerText: "Dar el asiento a alguien mayor en el omníbus",
+                isCorrect: true,
             },
             {
-                answerText: "La yop chagi no debe usarse en lucha",
+                answerText: "No rendirse por más que algo sea díficil",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Todas las formas empiezan y terminan en el mismo lugar",
+                    "No enojarme, por más que me molesten",
                 isCorrect: false,
             },
             {
-                answerText: "La insignia del dobok se usa del lado derecho",
-                isCorrect: true,
+                answerText: "Patear todos los días un poco más alto",
+                isCorrect: false,
             },
         ],
     },
