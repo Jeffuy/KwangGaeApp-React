@@ -3,12 +3,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    watch: true,
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
-        publicPath: "/"
+        publicPath: "/",
     },
     mode: "development",
     resolve: {
@@ -22,8 +21,8 @@ module.exports = {
             "@logos": path.resolve(__dirname, "src/assets/logos/"),
             "@context": path.resolve(__dirname, "src/context/"),
             "@hooks": path.resolve(__dirname, "src/hooks/"),
-			"@scripts": path.resolve(__dirname, "src/scripts/"),
-        }
+            "@scripts": path.resolve(__dirname, "src/scripts/"),
+        },
     },
     module: {
         rules: [
@@ -49,7 +48,7 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 type: "asset",
-            }
+            },
         ],
     },
     plugins: [
