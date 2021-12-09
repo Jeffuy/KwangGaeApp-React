@@ -20,12 +20,12 @@ const QuizChooser = (props) => {
             <div className="row mt-2">
                 <div className="col">
                     <button
-                        className="btn form-control text-black btn-light fs-3 disabled"
+                        className="btn form-control text-black btn-light fs-3"
                         onClick={() =>
                             props.quizChoose("yellowStripe", 1)
                         }
                     >
-                        Punta Amarilla (próximamente)
+                        Punta Amarilla
                     </button>
                 </div>
             </div>

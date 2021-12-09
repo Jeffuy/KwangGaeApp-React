@@ -13,12 +13,11 @@ const Questions = (props) => {
                                     src={props.pruebita()}
                                     alt=""
                                 />
-								<div className="container-fluid">
                                 <img
-                                    className="img-fluid img-personal"
+                                    className="img-fluid"
                                     src={props.imgList[props.score]}
                                     alt=""
-                                /></div>
+                                />
                             </div>
                         </div>
                         <div className="container-fluid mt-4">
