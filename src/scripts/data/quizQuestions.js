@@ -122,7 +122,7 @@ const questionsWhite = [
             },
             {
                 answerText: "La yop chagi no debe usarse en lucha",
-                isCorrect: false,
+                isCorrect: true,
             },
             {
                 answerText:
@@ -130,8 +130,8 @@ const questionsWhite = [
                 isCorrect: false,
             },
             {
-                answerText: "La insignia del dobok se usa del lado derecho",
-                isCorrect: true,
+                answerText: "La insignia del dobok se usa del lado izquierdo",
+                isCorrect: false,
             },
         ],
     },
@@ -242,14 +242,29 @@ const questionsYellowStripe = [
     {
         questionText: "Selecciona la opción falsa: ",
         answerOptions: [
-            { answerText: "En la posición niunja sogi ambas piernas van flexionadas", isCorrect: false },
-            { answerText: "En Chon-Ji realizamos 11 puños en total", isCorrect: false },
-            { answerText: "En Chon-Ji los puños van a la altura de la nariz, para pegar más fuerte", isCorrect: true },
-            { answerText: "En Chon-Ji usamos las posiciones niunja sogi y gunung sogi", isCorrect: false },
+            {
+                answerText:
+                    "En la posición niunja sogi ambas piernas van flexionadas",
+                isCorrect: false,
+            },
+            {
+                answerText: "En Chon-Ji realizamos 11 puños en total",
+                isCorrect: false,
+            },
+            {
+                answerText:
+                    "En Chon-Ji los puños van a la altura de la nariz, para pegar más fuerte",
+                isCorrect: true,
+            },
+            {
+                answerText:
+                    "En Chon-Ji usamos las posiciones niunja sogi y gunung sogi",
+                isCorrect: false,
+            },
         ],
     },
     {
-        questionText: 'Hanna, dul, set, net...',
+        questionText: "Hanna, dul, set, net...",
         answerOptions: [
             { answerText: "Iosot", isCorrect: true },
             { answerText: "Yulgok", isCorrect: false },
@@ -269,8 +284,7 @@ const questionsYellowStripe = [
                 isCorrect: false,
             },
             {
-                answerText:
-                    "30 de febrero",
+                answerText: "30 de febrero",
                 isCorrect: false,
             },
             { answerText: "17 de mayo", isCorrect: false },
@@ -288,8 +302,7 @@ const questionsYellowStripe = [
                 isCorrect: false,
             },
             {
-                answerText:
-                    "97",
+                answerText: "97",
                 isCorrect: false,
             },
             {
@@ -311,7 +324,8 @@ const questionsYellow = [
         ],
     },
     {
-        questionText: "¿En que moción se realizan los movimientos 13 y 14 de Dangun?",
+        questionText:
+            "¿En que moción se realizan los movimientos 13 y 14 de Dangun?",
         answerOptions: [
             { answerText: "Rápida", isCorrect: false },
             { answerText: "Normal", isCorrect: false },
@@ -329,7 +343,8 @@ const questionsYellow = [
         ],
     },
     {
-        questionText: "¿Cuántos puntos vale una patada en la cabeza en un torneo?",
+        questionText:
+            "¿Cuántos puntos vale una patada en la cabeza en un torneo?",
         answerOptions: [
             { answerText: "1", isCorrect: false },
             { answerText: "2", isCorrect: false },
@@ -351,9 +366,18 @@ const questionsYellow = [
         questionText: "¿Qué representa el color amarillo en el cinturón?",
         answerOptions: [
             { answerText: "El sol, que nos da energía", isCorrect: false },
-            { answerText: "La semilla, que se planta en la tierra", isCorrect: true },
-            { answerText: "Nada. Simplemente es un color más", isCorrect: false },
-            { answerText: "El brillo de uno mismo en el Taekwon-Do", isCorrect: false },
+            {
+                answerText: "La semilla, que se planta en la tierra",
+                isCorrect: true,
+            },
+            {
+                answerText: "Nada. Simplemente es un color más",
+                isCorrect: false,
+            },
+            {
+                answerText: "El brillo de uno mismo en el Taekwon-Do",
+                isCorrect: false,
+            },
         ],
     },
     {
@@ -372,8 +396,15 @@ const questionsYellow = [
         questionText:
             "¿Cuál es la diferencia entre hacer un bloqueo con mano abierta y cerrada?",
         answerOptions: [
-            { answerText: "La parte del cuerpo con la que se defiende", isCorrect: true },
-            { answerText: "La velocidad con la que debe realizarse la técnica", isCorrect: false },
+            {
+                answerText: "La parte del cuerpo con la que se defiende",
+                isCorrect: true,
+            },
+            {
+                answerText:
+                    "La velocidad con la que debe realizarse la técnica",
+                isCorrect: false,
+            },
             { answerText: "La posición que debe usarse", isCorrect: false },
             { answerText: "No hay diferencia", isCorrect: false },
         ],
@@ -381,14 +412,20 @@ const questionsYellow = [
     {
         questionText: "¿Quién era Dangun?",
         answerOptions: [
-            { answerText: "El legendario guerrero de Corea ", isCorrect: false },
-            { answerText: "El legendario creador del Taekwon-Do", isCorrect: false },
+            {
+                answerText: "El legendario guerrero de Corea ",
+                isCorrect: false,
+            },
+            {
+                answerText: "El legendario creador del Taekwon-Do",
+                isCorrect: false,
+            },
             { answerText: "El legendario gladiador de Asia", isCorrect: false },
             { answerText: "El legendario fundador de Corea", isCorrect: true },
         ],
     },
     {
-        questionText: '¿En qué orden se hace fila en la clase?',
+        questionText: "¿En qué orden se hace fila en la clase?",
         answerOptions: [
             { answerText: "Orden de cinturón", isCorrect: true },
             { answerText: "Orden de altura", isCorrect: false },
@@ -404,7 +441,8 @@ const questionsYellow = [
                 isCorrect: false,
             },
             {
-                answerText: "Debes asegurarte que la altura de la madera sea correcta antes de golpear",
+                answerText:
+                    "Debes asegurarte que la altura de la madera sea correcta antes de golpear",
                 isCorrect: false,
             },
             {
@@ -412,7 +450,11 @@ const questionsYellow = [
                     "Debes generar velocidad y asegurarte de usar la técnica correcta",
                 isCorrect: false,
             },
-            { answerText: "Debes hacerlo lo mas rápido posible y solo preocuparte por pegar bien fuerte", isCorrect: true },
+            {
+                answerText:
+                    "Debes hacerlo lo mas rápido posible y solo preocuparte por pegar bien fuerte",
+                isCorrect: true,
+            },
         ],
     },
     {
@@ -427,8 +469,7 @@ const questionsYellow = [
                 isCorrect: false,
             },
             {
-                answerText:
-                    "No enojarme, por más que me molesten",
+                answerText: "No enojarme, por más que me molesten",
                 isCorrect: false,
             },
             {
@@ -441,138 +482,165 @@ const questionsYellow = [
 
 const questionsGreenStripe = [
     {
-        questionText: "¿En qué país se creó el Taekwon-Do?",
-        answerOptions: [
-            { answerText: "Japon", isCorrect: false },
-            { answerText: "China", isCorrect: false },
-            { answerText: "Corea", isCorrect: true },
-            { answerText: "Uruguay", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿En que año se creó el Taekwon-Do?",
-        answerOptions: [
-            { answerText: "1325", isCorrect: false },
-            { answerText: "1955", isCorrect: true },
-            { answerText: "1980", isCorrect: false },
-            { answerText: "1936", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
-        answerOptions: [
-            { answerText: "7", isCorrect: true },
-            { answerText: "8", isCorrect: false },
-            { answerText: "12", isCorrect: false },
-            { answerText: "6", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Cuántos nudos lleva el cinto del dobok?",
+        questionText: "¿Cuántas patadas hay en Dosan?",
         answerOptions: [
             { answerText: "1", isCorrect: false },
             { answerText: "2", isCorrect: true },
             { answerText: "3", isCorrect: false },
-            { answerText: "Todos los que pueda", isCorrect: false },
+            { answerText: "Ninguna", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cuántos movimientos tiene Dosan?",
+        answerOptions: [
+            { answerText: "19", isCorrect: false },
+            { answerText: "21", isCorrect: false },
+            { answerText: "24", isCorrect: true },
+            { answerText: "28", isCorrect: false },
         ],
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "Entre niunja sogi, gunnun sogi y annun sogi: ¿qué posición es más larga?",
         answerOptions: [
-            { answerText: "Jumbi", isCorrect: false },
-            { answerText: "Posición de forma", isCorrect: false },
-            { answerText: "Posición de ataque", isCorrect: false },
             { answerText: "Gunnun sogi", isCorrect: true },
-        ],
-    },
-    {
-        questionText: "¿Cúal de estos no es un principio del Taekwon-Do?",
-        answerOptions: [
-            { answerText: "Cortesía", isCorrect: false },
-            { answerText: "Perseverancia", isCorrect: false },
-            { answerText: "Paciencia", isCorrect: true },
-            { answerText: "Espíritu indomable", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "Una persona tiene integridad cuando...",
-        answerOptions: [
-            { answerText: "...sabe integrarse a un grupo", isCorrect: false },
-            {
-                answerText: "...sabe diferenciar lo correcto de lo incorrecto",
-                isCorrect: true,
-            },
-            { answerText: "...miente muy seguido", isCorrect: false },
-            { answerText: "...nunca se rinde", isCorrect: false },
+            { answerText: "Niunja sogi", isCorrect: false },
+            { answerText: "Annun sogi", isCorrect: false },
+            { answerText: "Las tres son iguales", isCorrect: false },
         ],
     },
     {
         questionText:
-            "¿A qué altura va la mano que defiende al realizar una defensa media?",
+            "En lucha de torneo: ¿qué pasa si agarro la pierna del oponente?",
         answerOptions: [
-            { answerText: "A la boca del estómago ", isCorrect: false },
-            { answerText: "A la del hombro", isCorrect: true },
-            { answerText: "A la de la nariz", isCorrect: false },
-            { answerText: "A la del cinturón", isCorrect: false },
+            { answerText: "La pelea continúa", isCorrect: false },
+            { answerText: "Me ponen una advertencia", isCorrect: false },
+            { answerText: "Me ponen un punto en contra", isCorrect: true },
+            { answerText: "Soy descalificado", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Quién es el creador del Taekwon-Do?",
+        questionText: "¿Qué mociones encontramos en dosan?",
         answerOptions: [
-            { answerText: "Chang Yong Sae ", isCorrect: false },
-            { answerText: "Dong Qui Kong", isCorrect: false },
-            { answerText: "Choi Hong Hi", isCorrect: true },
-            { answerText: "Juan Pedro Veiga", isCorrect: false },
+            { answerText: "Solo normal", isCorrect: false },
+            { answerText: "Normal y rápida", isCorrect: true },
+            { answerText: "Natural y normal", isCorrect: false },
+            { answerText: "Normal, rápida y continua", isCorrect: false },
         ],
     },
     {
-        questionText: 'Si el profesor me dice "Charyot"; ¿qué estoy por hacer?',
-        answerOptions: [
-            { answerText: "Saludar", isCorrect: true },
-            { answerText: "Golpear", isCorrect: false },
-            { answerText: "Practicar la forma", isCorrect: false },
-            { answerText: "Comenzar un trabajo", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Qué debo hacer si una técnica no me sale?",
+        questionText: "¿Cómo puedo llegar a cinturón negro?",
         answerOptions: [
             {
-                answerText: "Buscar excusas para no tener que hacerla",
-                isCorrect: false,
-            },
-            {
-                answerText: "Seguir practicándola exactamente igual",
+                answerText:
+                    "Esperando hasta que sepa cuando hay exámen y en ese momento comenzar a entrenar",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Pensar la razón por la que no me sale y corregir ese detalle",
-                isCorrect: true,
-            },
-            { answerText: "Intentar no tener que hacerla", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "Cuál de estás opciones es falsa?",
-        answerOptions: [
-            {
-                answerText: "La cruz de defensa tiene 8 movimientos",
+                    "Esforzándome en los ejercicios más fáciles para no tener que hacer los otros",
                 isCorrect: false,
             },
             {
-                answerText: "La yop chagi no debe usarse en lucha",
+                answerText: "Esforzándome cuando no estoy cansado",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Todas las formas empiezan y terminan en el mismo lugar",
+                    "Dando lo mejor para intentar cada día superarme un poco más",
+                isCorrect: true,
+            },
+        ],
+    },
+    {
+        questionText:
+            "Quieres mejorar la POTENCIA de tu patada, ¿sobre qué elemento practicarías?",
+        answerOptions: [
+            { answerText: "Palmeta", isCorrect: false },
+            {
+                answerText: "Bolsa",
+                isCorrect: true,
+            },
+            { answerText: "Un compañero", isCorrect: false },
+            { answerText: "Pateando al aire", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿A qué altura se realizan las patadas en Dosan?",
+        answerOptions: [
+            { answerText: "Zona media", isCorrect: true },
+            { answerText: "A la del hombro", isCorrect: false },
+            { answerText: "Lo más alto que pueda", isCorrect: false },
+            { answerText: "Una al medio y otra alta", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿A qué altura se realiza la primer defensa de Dosan?",
+        answerOptions: [
+            { answerText: "Baja", isCorrect: false },
+            { answerText: "Media", isCorrect: false },
+            { answerText: "Alta", isCorrect: true },
+            { answerText: "Por encima de la cabeza", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cuál de estas opciones sobre Ibo Matsokgi es falsa?",
+        answerOptions: [
+            {
+                answerText: "Se pueden realizar patadas y puños",
                 isCorrect: false,
             },
             {
-                answerText: "La insignia del dobok se usa del lado derecho",
+                answerText: "Luego del último bloqueo debo contragolpear",
+                isCorrect: false,
+            },
+            {
+                answerText: "Antes de comenzar a atacar, hacemos defensa baja",
                 isCorrect: true,
+            },
+            {
+                answerText: "El contragolpe no debe tocar a mi compañero",
+                isCorrect: false,
+            },
+        ],
+    },
+    {
+        questionText:
+            "Cuál es la forma correcta de escribir el arte marcial que practicas?",
+        answerOptions: [
+            {
+                answerText: "Taekwon-Do",
+                isCorrect: true,
+            },
+            {
+                answerText: "Taekwondo",
+                isCorrect: false,
+            },
+            {
+                answerText: "Tae Kwon Do",
+                isCorrect: false,
+            },
+            { answerText: "Tae-Kwon-Do", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cuál de estas formas es más larga?",
+        answerOptions: [
+            {
+                answerText: "Chon-ji",
+                isCorrect: false,
+            },
+            {
+                answerText: "Dangun",
+                isCorrect: true,
+            },
+            {
+                answerText: "Cruz de ataque",
+                isCorrect: false,
+            },
+            {
+                answerText: "Cruz de defensa",
+                isCorrect: false,
             },
         ],
     },
@@ -580,138 +648,149 @@ const questionsGreenStripe = [
 
 const questionsGreen = [
     {
-        questionText: "¿En qué país se creó el Taekwon-Do?",
+        questionText: "¿Cúantos movimientos tiene Wonhyo?",
         answerOptions: [
-            { answerText: "Japon", isCorrect: false },
-            { answerText: "China", isCorrect: false },
-            { answerText: "Corea", isCorrect: true },
-            { answerText: "Uruguay", isCorrect: false },
+            { answerText: "24", isCorrect: false },
+            { answerText: "22", isCorrect: false },
+            { answerText: "21", isCorrect: false },
+            { answerText: "28", isCorrect: true },
         ],
     },
     {
-        questionText: "¿En que año se creó el Taekwon-Do?",
+        questionText:
+            "¿En qué posición se realiza el movimiento número 3 de Wonhyo?",
         answerOptions: [
-            { answerText: "1325", isCorrect: false },
-            { answerText: "1955", isCorrect: true },
-            { answerText: "1980", isCorrect: false },
-            { answerText: "1936", isCorrect: false },
+            { answerText: "Gunnun sogi", isCorrect: false },
+            { answerText: "Niunja sogi", isCorrect: false },
+            { answerText: "Goburyo sogi", isCorrect: false },
+            { answerText: "Gojung sogi", isCorrect: true },
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿Qué significa el color verde del cinto?",
         answerOptions: [
-            { answerText: "7", isCorrect: true },
-            { answerText: "8", isCorrect: false },
-            { answerText: "12", isCorrect: false },
-            { answerText: "6", isCorrect: false },
+            { answerText: "La planta que crece", isCorrect: true },
+            { answerText: "No tiene significado", isCorrect: false },
+            {
+                answerText: "La mezcla del amarillo y el azul",
+                isCorrect: false,
+            },
+            {
+                answerText: "Era el color preferido de Choi Hong Hi",
+                isCorrect: false,
+            },
         ],
     },
     {
-        questionText: "¿Cuántos nudos lleva el cinto del dobok?",
+        questionText:
+            "¿A qué altura se realizan las patadas de frente en Wonhyo?",
+        answerOptions: [
+            { answerText: "Alta", isCorrect: false },
+            { answerText: "Media", isCorrect: false },
+            { answerText: "Baja", isCorrect: true },
+            { answerText: "Una media y otra baja", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cómo se reparte el peso en la posición goburyo sogi?",
+        answerOptions: [
+            { answerText: "Todo en una pierna", isCorrect: true },
+            { answerText: "La mitad en cada pierna", isCorrect: false },
+            {
+                answerText: "La mayoría del peso en la pierna de atrás",
+                isCorrect: false,
+            },
+            {
+                answerText: "La mayoría del peso en la pierna de adelante",
+                isCorrect: false,
+            },
+        ],
+    },
+    {
+        questionText:
+            "¿Quién de estas personas es árbitro internacional de Taekwon-Do?",
+        answerOptions: [
+            { answerText: "Germán Cavani", isCorrect: false },
+            { answerText: "Lucca Simone", isCorrect: false },
+            { answerText: "Fermín Veiga", isCorrect: true },
+            { answerText: "Lukas Calero", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Con cuántas advertencias pierdo un punto en un torneo?",
         answerOptions: [
             { answerText: "1", isCorrect: false },
-            { answerText: "2", isCorrect: true },
-            { answerText: "3", isCorrect: false },
-            { answerText: "Todos los que pueda", isCorrect: false },
+            { answerText: "2", isCorrect: false },
+            { answerText: "3", isCorrect: true },
+            { answerText: "4", isCorrect: false },
         ],
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿Cuál de estas opciones describe el movimiento de la ondulación?",
         answerOptions: [
-            { answerText: "Jumbi", isCorrect: false },
-            { answerText: "Posición de forma", isCorrect: false },
-            { answerText: "Posición de ataque", isCorrect: false },
-            { answerText: "Gunnun sogi", isCorrect: true },
+            { answerText: "Subo - bajo - subo", isCorrect: false },
+            { answerText: "Bajo - subo", isCorrect: false },
+            { answerText: "Subo - bajo - bajo", isCorrect: false },
+            { answerText: "Bajo - subo - bajo", isCorrect: true },
         ],
     },
     {
-        questionText: "¿Cúal de estos no es un principio del Taekwon-Do?",
+        questionText: "¿Cuál de estos es un ejemplo de falta de integridad?",
         answerOptions: [
-            { answerText: "Cortesía", isCorrect: false },
-            { answerText: "Perseverancia", isCorrect: false },
-            { answerText: "Paciencia", isCorrect: true },
-            { answerText: "Espíritu indomable", isCorrect: false },
+            { answerText: "Rendirse fácilmente", isCorrect: false },
+            { answerText: "No aceptar cuando pierdo en un juego", isCorrect: true },
+            { answerText: "Tener miedo", isCorrect: false },
+            { answerText: "Patear muy rápido", isCorrect: false },
         ],
     },
     {
-        questionText: "Una persona tiene integridad cuando...",
+        questionText: '¿A qué altura va dirigido el movimiento número 2 de Wonhyo?',
         answerOptions: [
-            { answerText: "...sabe integrarse a un grupo", isCorrect: false },
-            {
-                answerText: "...sabe diferenciar lo correcto de lo incorrecto",
-                isCorrect: true,
-            },
-            { answerText: "...miente muy seguido", isCorrect: false },
-            { answerText: "...nunca se rinde", isCorrect: false },
+            { answerText: "Baja", isCorrect: false },
+            { answerText: "Media", isCorrect: false },
+            { answerText: "Alta", isCorrect: true },
+            { answerText: "Por encima de mi cabeza", isCorrect: false },
         ],
     },
     {
-        questionText:
-            "¿A qué altura va la mano que defiende al realizar una defensa media?",
-        answerOptions: [
-            { answerText: "A la boca del estómago ", isCorrect: false },
-            { answerText: "A la del hombro", isCorrect: true },
-            { answerText: "A la de la nariz", isCorrect: false },
-            { answerText: "A la del cinturón", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Quién es el creador del Taekwon-Do?",
-        answerOptions: [
-            { answerText: "Chang Yong Sae ", isCorrect: false },
-            { answerText: "Dong Qui Kong", isCorrect: false },
-            { answerText: "Choi Hong Hi", isCorrect: true },
-            { answerText: "Juan Pedro Veiga", isCorrect: false },
-        ],
-    },
-    {
-        questionText: 'Si el profesor me dice "Charyot"; ¿qué estoy por hacer?',
-        answerOptions: [
-            { answerText: "Saludar", isCorrect: true },
-            { answerText: "Golpear", isCorrect: false },
-            { answerText: "Practicar la forma", isCorrect: false },
-            { answerText: "Comenzar un trabajo", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Qué debo hacer si una técnica no me sale?",
+        questionText: "¿Cuál de estos es un mal consejo para mejorar mis técnicas?",
         answerOptions: [
             {
-                answerText: "Buscar excusas para no tener que hacerla",
+                answerText: "Concentrarse en la clase y en las indicaciones de los profesores",
                 isCorrect: false,
             },
             {
-                answerText: "Seguir practicándola exactamente igual",
+                answerText: "Practicar la forma muchas veces sin corregirse",
+                isCorrect: true,
+            },
+            {
+                answerText:
+                    "Ver videos de Taekwon-Do en Youtube para ver como lo hacen en otros lugares",
+                isCorrect: false,
+            },
+            { answerText: "Preguntar a mis compañeros o profesores cómo les parece que podría mejorar", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cuántas defensas con canto de mano hay en Wonhyo?",
+        answerOptions: [
+            {
+                answerText: "3",
+                isCorrect: true,
+            },
+            {
+                answerText: "7",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Pensar la razón por la que no me sale y corregir ese detalle",
-                isCorrect: true,
-            },
-            { answerText: "Intentar no tener que hacerla", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "Cuál de estás opciones es falsa?",
-        answerOptions: [
-            {
-                answerText: "La cruz de defensa tiene 8 movimientos",
+                    "8",
                 isCorrect: false,
             },
             {
-                answerText: "La yop chagi no debe usarse en lucha",
+                answerText: "4",
                 isCorrect: false,
-            },
-            {
-                answerText:
-                    "Todas las formas empiezan y terminan en el mismo lugar",
-                isCorrect: false,
-            },
-            {
-                answerText: "La insignia del dobok se usa del lado derecho",
-                isCorrect: true,
             },
         ],
     },
@@ -719,138 +798,138 @@ const questionsGreen = [
 
 const questionsBlueStripe = [
     {
-        questionText: "¿En qué país se creó el Taekwon-Do?",
+        questionText: "¿Cuántos movimientos tiene Yulgok?",
         answerOptions: [
-            { answerText: "Japon", isCorrect: false },
-            { answerText: "China", isCorrect: false },
-            { answerText: "Corea", isCorrect: true },
-            { answerText: "Uruguay", isCorrect: false },
+            { answerText: "32", isCorrect: false },
+            { answerText: "28", isCorrect: false },
+            { answerText: "38", isCorrect: true },
+            { answerText: "21", isCorrect: false },
         ],
     },
     {
-        questionText: "¿En que año se creó el Taekwon-Do?",
+        questionText: "¿Qué mociones aparecen en Yulgok?",
         answerOptions: [
-            { answerText: "1325", isCorrect: false },
-            { answerText: "1955", isCorrect: true },
-            { answerText: "1980", isCorrect: false },
-            { answerText: "1936", isCorrect: false },
+            { answerText: "Normal y natural", isCorrect: false },
+            { answerText: "Natural, conectada y rápida", isCorrect: false },
+            { answerText: "Natural, rápida, conectada, normal y continuada", isCorrect: false },
+            { answerText: "Natural, rápida, conectada y normal", isCorrect: true },
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿A qué altura van las patadas de frente en Yulgok?",
         answerOptions: [
-            { answerText: "7", isCorrect: true },
+            { answerText: "Baja", isCorrect: true },
+            { answerText: "Media", isCorrect: false },
+            { answerText: "Alta", isCorrect: false },
+            { answerText: "Una baja y una alta", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cuántos golpes de puño hay en Yulgok?",
+        answerOptions: [
             { answerText: "8", isCorrect: false },
+            { answerText: "15", isCorrect: false },
+            { answerText: "13", isCorrect: true },
             { answerText: "12", isCorrect: false },
-            { answerText: "6", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Cuántos nudos lleva el cinto del dobok?",
-        answerOptions: [
-            { answerText: "1", isCorrect: false },
-            { answerText: "2", isCorrect: true },
-            { answerText: "3", isCorrect: false },
-            { answerText: "Todos los que pueda", isCorrect: false },
         ],
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿Para que sirve la mano apoyada en el codo en los últimos dos movimientos de Yulgok?",
         answerOptions: [
-            { answerText: "Jumbi", isCorrect: false },
-            { answerText: "Posición de forma", isCorrect: false },
-            { answerText: "Posición de ataque", isCorrect: false },
-            { answerText: "Gunnun sogi", isCorrect: true },
+            { answerText: "Se prepara para otro bloqueo en caso de que se precise", isCorrect: true },
+            { answerText: "Le da más fuerza a la técnica", isCorrect: false },
+            { answerText: "Queda bonito", isCorrect: false },
+            { answerText: "Bloquea al mismo tiempo que la otra mano", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Cúal de estos no es un principio del Taekwon-Do?",
+        questionText: "¿En qué momento de la ondulación se debe acelerar el movimiento?",
         answerOptions: [
-            { answerText: "Cortesía", isCorrect: false },
-            { answerText: "Perseverancia", isCorrect: false },
-            { answerText: "Paciencia", isCorrect: true },
-            { answerText: "Espíritu indomable", isCorrect: false },
+            { answerText: "Al principio, cuando estoy bajando", isCorrect: false },
+            { answerText: "Mientras estoy subiendo", isCorrect: false },
+            { answerText: "Todo el tiempo", isCorrect: false },
+            { answerText: "En la parte final, luego de tomar impulso", isCorrect: true },
         ],
     },
     {
-        questionText: "Una persona tiene integridad cuando...",
+        questionText: "¿Qué posición aparece en Wonhyo pero no en Yulgok?",
         answerOptions: [
-            { answerText: "...sabe integrarse a un grupo", isCorrect: false },
+            { answerText: "Niunja sogi", isCorrect: false },
             {
-                answerText: "...sabe diferenciar lo correcto de lo incorrecto",
-                isCorrect: true,
+                answerText: "Kyopcha sogi",
+                isCorrect: false,
             },
-            { answerText: "...miente muy seguido", isCorrect: false },
-            { answerText: "...nunca se rinde", isCorrect: false },
+            { answerText: "Gojung sogi", isCorrect: true },
+            { answerText: "Goburyo sogi", isCorrect: false },
         ],
     },
     {
         questionText:
-            "¿A qué altura va la mano que defiende al realizar una defensa media?",
+            "Si en un torneo el rival me agarra la pierna y yo me caigo, ¿qué se cobrará?",
         answerOptions: [
-            { answerText: "A la boca del estómago ", isCorrect: false },
-            { answerText: "A la del hombro", isCorrect: true },
-            { answerText: "A la de la nariz", isCorrect: false },
-            { answerText: "A la del cinturón", isCorrect: false },
+            { answerText: "Advertencia para mi y para mi rival", isCorrect: false },
+            { answerText: "Punto en contra para mi rival", isCorrect: true },
+            { answerText: "Advertencia para mi", isCorrect: false },
+            { answerText: "Se considera un accidente y la pelea sigue sin advertencias", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Quién es el creador del Taekwon-Do?",
+        questionText: "¿Cuál frase demuestra falta de perseverancia?",
         answerOptions: [
-            { answerText: "Chang Yong Sae ", isCorrect: false },
-            { answerText: "Dong Qui Kong", isCorrect: false },
-            { answerText: "Choi Hong Hi", isCorrect: true },
-            { answerText: "Juan Pedro Veiga", isCorrect: false },
+            { answerText: '"No puedo"', isCorrect: true },
+            { answerText: '"Es fácil"', isCorrect: false },
+            { answerText: '"Seguiré intentando"', isCorrect: false },
+            { answerText: '"Todavía no me sale"', isCorrect: false },
         ],
     },
     {
-        questionText: 'Si el profesor me dice "Charyot"; ¿qué estoy por hacer?',
+        questionText: 'Yulgok era un...',
         answerOptions: [
-            { answerText: "Saludar", isCorrect: true },
-            { answerText: "Golpear", isCorrect: false },
-            { answerText: "Practicar la forma", isCorrect: false },
-            { answerText: "Comenzar un trabajo", isCorrect: false },
+            { answerText: "...guerrero", isCorrect: false },
+            { answerText: "...monje", isCorrect: false },
+            { answerText: "...santo", isCorrect: false },
+            { answerText: "...filósofo", isCorrect: true },
         ],
     },
     {
-        questionText: "¿Qué debo hacer si una técnica no me sale?",
+        questionText: "¿Cuál es una desventaja de las patadas con giro?",
         answerOptions: [
             {
-                answerText: "Buscar excusas para no tener que hacerla",
-                isCorrect: false,
+                answerText: "Si no caigo en una buena posición puede resultar fácil contragolpearme",
+                isCorrect: true,
             },
             {
-                answerText: "Seguir practicándola exactamente igual",
+                answerText: "No tienen fuerza",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Pensar la razón por la que no me sale y corregir ese detalle",
-                isCorrect: true,
+                    "Son solo para exhibiciones, no para ejecutar en la lucha",
+                isCorrect: false,
             },
-            { answerText: "Intentar no tener que hacerla", isCorrect: false },
+            { answerText: "Me pueden descalificar de un torneo si los utilizo", isCorrect: false },
         ],
     },
     {
-        questionText: "Cuál de estás opciones es falsa?",
+        questionText: "De las siguientes formas: ¿cuál es la única que no representa a una persona?",
         answerOptions: [
             {
-                answerText: "La cruz de defensa tiene 8 movimientos",
-                isCorrect: false,
+                answerText: "Chon-ji",
+                isCorrect: true,
             },
             {
-                answerText: "La yop chagi no debe usarse en lucha",
+                answerText: "Dosan",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Todas las formas empiezan y terminan en el mismo lugar",
+                    "Wonhyo",
                 isCorrect: false,
             },
             {
-                answerText: "La insignia del dobok se usa del lado derecho",
-                isCorrect: true,
+                answerText: "Yulgok",
+                isCorrect: false,
             },
         ],
     },

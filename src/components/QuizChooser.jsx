@@ -44,36 +44,36 @@ const QuizChooser = (props) => {
             <div className="row mt-2">
                 <div className="col">
                     <button
-                        className="btn form-control btn-warning text-black fs-3 disabled"
+                        className="btn form-control btn-warning text-black fs-3"
                         onClick={() =>
                             props.quizChoose("greenStripe", 3)
                         }
                     >
-                        Punta Verde (próximamente)
+                        Punta Verde
                     </button>
                 </div>
             </div>
             <div className="row mt-2">
                 <div className="col">
                     <button
-                        className="btn form-control btn-success text-black fs-3 disabled"
+                        className="btn form-control btn-success text-black fs-3"
                         onClick={() =>
-                            props.quizChoose("white", 4)
+                            props.quizChoose("green", 4)
                         }
                     >
-                        Cinturon Verde (próximamente)
+                        Cinturon Verde
                     </button>
                 </div>
             </div>
             <div className="row mt-2">
                 <div className="col">
                     <button
-                        className="btn form-control btn-success text-black fs-3 disabled"
+                        className="btn form-control btn-success text-black fs-3"
                         onClick={() =>
-                            props.quizChoose("white", 5)
+                            props.quizChoose("blueStripe", 5)
                         }
                     >
-                        Punta azul (próximamente)
+                        Punta azul
                     </button>
                 </div>
             </div>
