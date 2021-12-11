@@ -1,6 +1,6 @@
 import React from "react";
 
-const Questions = (props) => {
+const SelectedQuestions = (props) => {
     if (props.questions != null) {
         return (
             <div className="container">
@@ -10,7 +10,7 @@ const Questions = (props) => {
                             <div className="row">
                                 <img
                                     className="img-fluid pb-4"
-                                    src={props.pruebita()}
+                                    src={props.titleChanger()}
                                     alt=""
                                 />
                                 <img
@@ -44,7 +44,7 @@ const Questions = (props) => {
                                 <div className="row">
                                     <div className="col">
                                         <span className="fs-4">
-                                            Pregunta {props.currentQuestion + 1}
+                                            Pregunta {props.currentQuestionNumber + 1}
                                         </span>
                                         /{props.questions.length}
                                     </div>
@@ -52,7 +52,7 @@ const Questions = (props) => {
                                         <div className="col text-center mt-2 fs-4">
                                             {
                                                 props.questions[
-                                                    props.currentQuestion
+                                                    props.currentQuestionNumber
                                                 ].questionText
                                             }
                                         </div>
@@ -60,7 +60,7 @@ const Questions = (props) => {
                                 </div>
                                 <div className="answer-section mt-4">
                                     {props.questions[
-                                        props.currentQuestion
+                                        props.currentQuestionNumber
                                     ].answerOptions.map((answerOption) => (
                                         <button
                                             className="btn btn-dark mt-3"
@@ -86,4 +86,4 @@ const Questions = (props) => {
     }
 };
 
-export default Questions;
+export default SelectedQuestions;

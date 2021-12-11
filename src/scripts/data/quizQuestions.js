@@ -18,7 +18,7 @@ const questionsWhite = [
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿Cuántos movimientos tiene Saju Jirugi?",
         answerOptions: [
             { answerText: "7", isCorrect: true },
             { answerText: "8", isCorrect: false },
@@ -37,7 +37,7 @@ const questionsWhite = [
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿Cómo se llama la posición en que se realizan los movimientos de Saju Makgi?",
         answerOptions: [
             { answerText: "Jumbi", isCorrect: false },
             { answerText: "Posición de forma", isCorrect: false },
@@ -117,7 +117,7 @@ const questionsWhite = [
         questionText: "¿Cuál de estás opciones es falsa?",
         answerOptions: [
             {
-                answerText: "La cruz de defensa tiene 8 movimientos",
+                answerText: "Saju Makgi tiene 8 movimientos",
                 isCorrect: false,
             },
             {
@@ -635,11 +635,11 @@ const questionsGreenStripe = [
                 isCorrect: true,
             },
             {
-                answerText: "Cruz de ataque",
+                answerText: "Saju Jirugi",
                 isCorrect: false,
             },
             {
-                answerText: "Cruz de defensa",
+                answerText: "Saju Makgi",
                 isCorrect: false,
             },
         ],
@@ -955,7 +955,7 @@ const questionsBlue = [
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿Cuántos movimientos tiene Saju Jirugi?",
         answerOptions: [
             { answerText: "7", isCorrect: true },
             { answerText: "8", isCorrect: false },
@@ -974,7 +974,7 @@ const questionsBlue = [
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿Cómo se llama la posición en que se realizan los movimientos de Saju Makgi?",
         answerOptions: [
             { answerText: "Jumbi", isCorrect: false },
             { answerText: "Posición de forma", isCorrect: false },
@@ -1054,7 +1054,7 @@ const questionsBlue = [
         questionText: "Cuál de estás opciones es falsa?",
         answerOptions: [
             {
-                answerText: "La cruz de defensa tiene 8 movimientos",
+                answerText: "Saju Makgi tiene 8 movimientos",
                 isCorrect: false,
             },
             {
@@ -1076,137 +1076,137 @@ const questionsBlue = [
 
 const questionsRedStripe = [
     {
-        questionText: "¿En qué país se creó el Taekwon-Do?",
+        questionText: "¿Cuántos movimientos tiene Toi Gye?",
         answerOptions: [
-            { answerText: "Japon", isCorrect: false },
-            { answerText: "China", isCorrect: false },
-            { answerText: "Corea", isCorrect: true },
-            { answerText: "Uruguay", isCorrect: false },
+            { answerText: "32", isCorrect: false },
+            { answerText: "28", isCorrect: false },
+            { answerText: "38", isCorrect: false },
+            { answerText: "37", isCorrect: true },
         ],
     },
     {
-        questionText: "¿En que año se creó el Taekwon-Do?",
+        questionText: "¿Qué representa el diagrama de Toi Gye?",
         answerOptions: [
-            { answerText: "1325", isCorrect: false },
-            { answerText: "1955", isCorrect: true },
-            { answerText: "1980", isCorrect: false },
-            { answerText: "1936", isCorrect: false },
+            { answerText: "Guerrero", isCorrect: false },
+            { answerText: "Instructor", isCorrect: false },
+            { answerText: "Maestro", isCorrect: true },
+            { answerText: "General", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿Qué mociones aparecen en Toi Gye?",
         answerOptions: [
-            { answerText: "7", isCorrect: true },
-            { answerText: "8", isCorrect: false },
-            { answerText: "12", isCorrect: false },
-            { answerText: "6", isCorrect: false },
+            { answerText: "Normal", isCorrect: false },
+            { answerText: "Normal, continua y lenta", isCorrect: true },
+            { answerText: "Normal, continua y conectada", isCorrect: false },
+            { answerText: "Normal, continua, natural y rápida", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Cuántos nudos lleva el cinto del dobok?",
+        questionText: "¿A qué altura se realiza la primer patada de Toi Gye?",
+        answerOptions: [
+            { answerText: "Baja", isCorrect: false },
+            { answerText: "Media", isCorrect: true },
+            { answerText: "Alta", isCorrect: false },
+            { answerText: "Por encima de la cabeza", isCorrect: false },
+        ],
+    },
+    {
+        questionText:
+            "¿Cuál de estas opciones es incorrecta?",
+        answerOptions: [
+            { answerText: "Las formas comienzan y terminan en el mismo lugar", isCorrect: false },
+            { answerText: "La respiración se debe realizar instantes después del golpe", isCorrect: true },
+            { answerText: "Luego de una patada se debe ondular", isCorrect: false },
+            { answerText: "Al terminar la forma debo volver a la misma posición en la que inicié", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cúal de estas posiciones no aparece en Toi Gye?",
+        answerOptions: [
+            { answerText: "Annun sogi", isCorrect: false },
+            { answerText: "Gojung sogi", isCorrect: true },
+            { answerText: "Kyopcha sogi", isCorrect: false },
+            { answerText: "Moa sogi", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "En un torneo, ¿con cuántos puntos en contra me descalifican?",
         answerOptions: [
             { answerText: "1", isCorrect: false },
-            { answerText: "2", isCorrect: true },
-            { answerText: "3", isCorrect: false },
-            { answerText: "Todos los que pueda", isCorrect: false },
+            {
+                answerText: "2",
+                isCorrect: false,
+            },
+            { answerText: "3", isCorrect: true },
+            { answerText: "4", isCorrect: false },
         ],
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿A dónde golpea el ataque con rodilla en Toi Gye?",
         answerOptions: [
-            { answerText: "Jumbi", isCorrect: false },
-            { answerText: "Posición de forma", isCorrect: false },
-            { answerText: "Posición de ataque", isCorrect: false },
-            { answerText: "Gunnun sogi", isCorrect: true },
+            { answerText: "Al estómago", isCorrect: false },
+            { answerText: "A la cabeza", isCorrect: true },
+            { answerText: "Al cuello", isCorrect: false },
+            { answerText: "A la pierna", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Cúal de estos no es un principio del Taekwon-Do?",
+        questionText: "Si deseo realizar una rotura con patada descendente: ¿Con qué parte del pie debería golpear?",
         answerOptions: [
-            { answerText: "Cortesía", isCorrect: false },
-            { answerText: "Perseverancia", isCorrect: false },
-            { answerText: "Paciencia", isCorrect: true },
-            { answerText: "Espíritu indomable", isCorrect: false },
+            { answerText: "Parte de atrás del talón", isCorrect: true },
+            { answerText: "Filo del pie", isCorrect: false },
+            { answerText: "Bola del pie", isCorrect: false },
+            { answerText: "Planta del pie", isCorrect: false },
         ],
     },
     {
-        questionText: "Una persona tiene integridad cuando...",
+        questionText: '¿Cómo se denomina la posición de inicio de Toy Gye?',
         answerOptions: [
-            { answerText: "...sabe integrarse a un grupo", isCorrect: false },
+            { answerText: "Moa sogi A", isCorrect: false },
+            { answerText: "Moa sogi B", isCorrect: true },
+            { answerText: "Moa sogi C", isCorrect: false },
+            { answerText: "Posición de Toy Gye", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "Si realizo una goburyo sogi preocupándome por mantener una buena postura, pierna de apoyo flexionada y mirada al frente, ¿Qué elemento de la teoría del poder estoy aplicando?",
+        answerOptions: [
             {
-                answerText: "...sabe diferenciar lo correcto de lo incorrecto",
+                answerText: "Equilibrio",
                 isCorrect: true,
             },
-            { answerText: "...miente muy seguido", isCorrect: false },
-            { answerText: "...nunca se rinde", isCorrect: false },
-        ],
-    },
-    {
-        questionText:
-            "¿A qué altura va la mano que defiende al realizar una defensa media?",
-        answerOptions: [
-            { answerText: "A la boca del estómago ", isCorrect: false },
-            { answerText: "A la del hombro", isCorrect: true },
-            { answerText: "A la de la nariz", isCorrect: false },
-            { answerText: "A la del cinturón", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Quién es el creador del Taekwon-Do?",
-        answerOptions: [
-            { answerText: "Chang Yong Sae ", isCorrect: false },
-            { answerText: "Dong Qui Kong", isCorrect: false },
-            { answerText: "Choi Hong Hi", isCorrect: true },
-            { answerText: "Juan Pedro Veiga", isCorrect: false },
-        ],
-    },
-    {
-        questionText: 'Si el profesor me dice "Charyot"; ¿qué estoy por hacer?',
-        answerOptions: [
-            { answerText: "Saludar", isCorrect: true },
-            { answerText: "Golpear", isCorrect: false },
-            { answerText: "Practicar la forma", isCorrect: false },
-            { answerText: "Comenzar un trabajo", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Qué debo hacer si una técnica no me sale?",
-        answerOptions: [
             {
-                answerText: "Buscar excusas para no tener que hacerla",
-                isCorrect: false,
-            },
-            {
-                answerText: "Seguir practicándola exactamente igual",
+                answerText: "Concentración",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Pensar la razón por la que no me sale y corregir ese detalle",
-                isCorrect: true,
+                    "Fuerza de reacción",
+                isCorrect: false,
             },
-            { answerText: "Intentar no tener que hacerla", isCorrect: false },
+            { answerText: "Velocidad", isCorrect: false },
         ],
     },
     {
-        questionText: "Cuál de estás opciones es falsa?",
+        questionText: "Hay seis movimientos en Toy Gye que tienen una particularidad. ¿Cuál es?",
         answerOptions: [
             {
-                answerText: "La cruz de defensa tiene 8 movimientos",
+                answerText: "No llevan respiración",
                 isCorrect: false,
             },
             {
-                answerText: "La yop chagi no debe usarse en lucha",
+                answerText: "Pueden ejecutarse a diferentes alturas",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Todas las formas empiezan y terminan en el mismo lugar",
+                    "La posición no tiene un nombre en particular",
                 isCorrect: false,
             },
             {
-                answerText: "La insignia del dobok se usa del lado derecho",
+                answerText: "Se realizan con stamping o pisotón",
                 isCorrect: true,
             },
         ],
@@ -1233,7 +1233,7 @@ const questionsRed = [
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿Cuántos movimientos tiene Saju Jirugi?",
         answerOptions: [
             { answerText: "7", isCorrect: true },
             { answerText: "8", isCorrect: false },
@@ -1252,7 +1252,7 @@ const questionsRed = [
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿Cómo se llama la posición en que se realizan los movimientos de Saju Makgi?",
         answerOptions: [
             { answerText: "Jumbi", isCorrect: false },
             { answerText: "Posición de forma", isCorrect: false },
@@ -1332,7 +1332,7 @@ const questionsRed = [
         questionText: "Cuál de estás opciones es falsa?",
         answerOptions: [
             {
-                answerText: "La cruz de defensa tiene 8 movimientos",
+                answerText: "Saju Makgi tiene 8 movimientos",
                 isCorrect: false,
             },
             {
@@ -1372,7 +1372,7 @@ const questionsBlackStripe = [
         ],
     },
     {
-        questionText: "¿Cuántos movimientos tiene la cruz de ataque?",
+        questionText: "¿Cuántos movimientos tiene Saju Jirugi?",
         answerOptions: [
             { answerText: "7", isCorrect: true },
             { answerText: "8", isCorrect: false },
@@ -1391,7 +1391,7 @@ const questionsBlackStripe = [
     },
     {
         questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de la cruz de defensa?",
+            "¿Cómo se llama la posición en que se realizan los movimientos de Saju Makgi?",
         answerOptions: [
             { answerText: "Jumbi", isCorrect: false },
             { answerText: "Posición de forma", isCorrect: false },
@@ -1471,7 +1471,7 @@ const questionsBlackStripe = [
         questionText: "Cuál de estás opciones es falsa?",
         answerOptions: [
             {
-                answerText: "La cruz de defensa tiene 8 movimientos",
+                answerText: "Saju Makgi tiene 8 movimientos",
                 isCorrect: false,
             },
             {
