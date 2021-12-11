@@ -1146,8 +1146,8 @@ const questionsRedStripe = [
         questionText:
             "¿A dónde golpea el ataque con rodilla en Toi Gye?",
         answerOptions: [
-            { answerText: "Al estómago", isCorrect: false },
-            { answerText: "A la cabeza", isCorrect: true },
+            { answerText: "Al estómago", isCorrect: true },
+            { answerText: "A la cabeza", isCorrect: false },
             { answerText: "Al cuello", isCorrect: false },
             { answerText: "A la pierna", isCorrect: false },
         ],
