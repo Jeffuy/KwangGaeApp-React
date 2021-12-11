@@ -8,7 +8,7 @@ const QuizChooser = (props) => {
             <div className="row mt-4">
                 <div className="col">
                     <button
-                        className="btn form-control text-black btn-light fs-3"
+                        className="btn form-control btn-light fs-3"
                         onClick={() =>
                             props.quizChoose("white", 0)
                         }
@@ -17,10 +17,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control text-black btn-light fs-3"
+                        className="btn form-control btn-yellow-stripe fs-3"
                         onClick={() =>
                             props.quizChoose("yellowStripe", 1)
                         }
@@ -29,10 +29,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-warning text-black fs-3"
+                        className="btn form-control btn-warning fs-3"
                         onClick={() =>
                             props.quizChoose("yellow", 2)
                         }
@@ -41,10 +41,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-warning text-black fs-3"
+                        className="btn form-control btn-warning btn-green-stripe fs-3"
                         onClick={() =>
                             props.quizChoose("greenStripe", 3)
                         }
@@ -53,10 +53,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-success text-black fs-3"
+                        className="btn form-control btn-success fs-3"
                         onClick={() =>
                             props.quizChoose("green", 4)
                         }
@@ -65,10 +65,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-success text-black fs-3"
+                        className="btn form-control btn-success btn-blue-stripe fs-3"
                         onClick={() =>
                             props.quizChoose("blueStripe", 5)
                         }
@@ -77,10 +77,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-primary text-black fs-3 disabled"
+                        className="btn form-control btn-primary fs-3 disabled"
                         onClick={() =>
                             props.quizChoose("white", 6)
                         }
@@ -89,10 +89,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-primary text-black fs-3"
+                        className="btn form-control btn-primary btn-red-stripe fs-3"
                         onClick={() =>
                             props.quizChoose("redStripe", 7)
                         }
@@ -101,10 +101,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-danger text-black fs-3"
+                        className="btn form-control btn-danger fs-3"
                         onClick={() =>
                             props.quizChoose("red", 8)
                         }
@@ -113,10 +113,10 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
-                        className="btn form-control btn-danger text-black fs-3 disabled"
+                        className="btn form-control btn-danger btn-black-stripe fs-3 disabled"
                         onClick={() =>
                             props.quizChoose("white", 9)
                         }
@@ -125,7 +125,7 @@ const QuizChooser = (props) => {
                     </button>
                 </div>
             </div>
-            <div className="row mt-2">
+            <div className="row mt-3">
                 <div className="col">
                     <button
                         className="btn form-control btn-dark text-white fs-3"
