@@ -92,12 +92,12 @@ const QuizChooser = (props) => {
             <div className="row mt-2">
                 <div className="col">
                     <button
-                        className="btn form-control btn-primary text-black fs-3 disabled"
+                        className="btn form-control btn-primary text-black fs-3"
                         onClick={() =>
-                            props.quizChoose("white", 7)
+                            props.quizChoose("redStripe", 7)
                         }
                     >
-                        Punta Roja (próximamente)
+                        Punta Roja
                     </button>
                 </div>
             </div>
