@@ -61,7 +61,7 @@ const QuizChooser = (props) => {
                             props.quizChoose("green", 4)
                         }
                     >
-                        Cinturon Verde
+                        Cinturón Verde
                     </button>
                 </div>
             </div>
@@ -104,12 +104,12 @@ const QuizChooser = (props) => {
             <div className="row mt-2">
                 <div className="col">
                     <button
-                        className="btn form-control btn-danger text-black fs-3 disabled"
+                        className="btn form-control btn-danger text-black fs-3"
                         onClick={() =>
-                            props.quizChoose("white", 8)
+                            props.quizChoose("red", 8)
                         }
                     >
-                        Cinturón Rojo (próximamente)
+                        Cinturón Rojo
                     </button>
                 </div>
             </div>

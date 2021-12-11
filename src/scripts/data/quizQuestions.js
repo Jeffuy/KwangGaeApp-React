@@ -1215,138 +1215,138 @@ const questionsRedStripe = [
 
 const questionsRed = [
     {
-        questionText: "¿En qué país se creó el Taekwon-Do?",
+        questionText: "¿Qué significa el color rojo en el cinturón?",
         answerOptions: [
-            { answerText: "Japon", isCorrect: false },
-            { answerText: "China", isCorrect: false },
-            { answerText: "Corea", isCorrect: true },
-            { answerText: "Uruguay", isCorrect: false },
+            { answerText: "Calor", isCorrect: false },
+            { answerText: "Peligro", isCorrect: true },
+            { answerText: "Fuego", isCorrect: false },
+            { answerText: "Corea", isCorrect: false },
         ],
     },
     {
-        questionText: "¿En que año se creó el Taekwon-Do?",
-        answerOptions: [
-            { answerText: "1325", isCorrect: false },
-            { answerText: "1955", isCorrect: true },
-            { answerText: "1980", isCorrect: false },
-            { answerText: "1936", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Cuántos movimientos tiene Saju Jirugi?",
-        answerOptions: [
-            { answerText: "7", isCorrect: true },
-            { answerText: "8", isCorrect: false },
-            { answerText: "12", isCorrect: false },
-            { answerText: "6", isCorrect: false },
-        ],
-    },
-    {
-        questionText: "¿Cuántos nudos lleva el cinto del dobok?",
-        answerOptions: [
-            { answerText: "1", isCorrect: false },
-            { answerText: "2", isCorrect: true },
-            { answerText: "3", isCorrect: false },
-            { answerText: "Todos los que pueda", isCorrect: false },
-        ],
-    },
-    {
-        questionText:
-            "¿Cómo se llama la posición en que se realizan los movimientos de Saju Makgi?",
-        answerOptions: [
-            { answerText: "Jumbi", isCorrect: false },
-            { answerText: "Posición de forma", isCorrect: false },
-            { answerText: "Posición de ataque", isCorrect: false },
-            { answerText: "Gunnun sogi", isCorrect: true },
-        ],
-    },
-    {
-        questionText: "¿Cúal de estos no es un principio del Taekwon-Do?",
+        questionText: "¿Cuál principio me pide que use el color del cinturón?",
         answerOptions: [
             { answerText: "Cortesía", isCorrect: false },
+            { answerText: "Autocontrol", isCorrect: true },
             { answerText: "Perseverancia", isCorrect: false },
-            { answerText: "Paciencia", isCorrect: true },
             { answerText: "Espíritu indomable", isCorrect: false },
         ],
     },
     {
-        questionText: "Una persona tiene integridad cuando...",
+        questionText: "¿Cuántos movimientos tiene Hwarang?",
         answerOptions: [
-            { answerText: "...sabe integrarse a un grupo", isCorrect: false },
-            {
-                answerText: "...sabe diferenciar lo correcto de lo incorrecto",
-                isCorrect: true,
-            },
-            { answerText: "...miente muy seguido", isCorrect: false },
-            { answerText: "...nunca se rinde", isCorrect: false },
+            { answerText: "28", isCorrect: false },
+            { answerText: "31", isCorrect: false },
+            { answerText: "37", isCorrect: false },
+            { answerText: "29", isCorrect: true },
+        ],
+    },
+    {
+        questionText: "¿El primer movimiento de Hwarang es un ataque o un bloqueo?",
+        answerOptions: [
+            { answerText: "Depende de mi oponente", isCorrect: false },
+            { answerText: "Un bloqueo", isCorrect: true },
+            { answerText: "Un ataque", isCorrect: false },
+            { answerText: "Ambos", isCorrect: false },
         ],
     },
     {
         questionText:
-            "¿A qué altura va la mano que defiende al realizar una defensa media?",
+            "¿Cuál de estas posiciones no aparece en Hwarang?",
         answerOptions: [
-            { answerText: "A la boca del estómago ", isCorrect: false },
-            { answerText: "A la del hombro", isCorrect: true },
-            { answerText: "A la de la nariz", isCorrect: false },
-            { answerText: "A la del cinturón", isCorrect: false },
+            { answerText: "Niunja Sogi", isCorrect: false },
+            { answerText: "Kyopcha Sogi", isCorrect: true },
+            { answerText: "Gojung Sogi", isCorrect: false },
+            { answerText: "Moa sogi", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Quién es el creador del Taekwon-Do?",
+        questionText: "¿Cómo se llama la posición en la que se realizan los movimientos 27 y 26 de Hwarang?",
         answerOptions: [
-            { answerText: "Chang Yong Sae ", isCorrect: false },
-            { answerText: "Dong Qui Kong", isCorrect: false },
-            { answerText: "Choi Hong Hi", isCorrect: true },
-            { answerText: "Juan Pedro Veiga", isCorrect: false },
+            { answerText: "Moa sogi", isCorrect: true },
+            { answerText: "Sojik sogi", isCorrect: false },
+            { answerText: "Goburyo sogi", isCorrect: false },
+            { answerText: "Niunja sogi", isCorrect: false },
         ],
     },
     {
-        questionText: 'Si el profesor me dice "Charyot"; ¿qué estoy por hacer?',
+        questionText: "¿Por qué razón el pie de atrás en la niunja sogi debe ir levemente girado hacia adentro?",
         answerOptions: [
-            { answerText: "Saludar", isCorrect: true },
-            { answerText: "Golpear", isCorrect: false },
-            { answerText: "Practicar la forma", isCorrect: false },
-            { answerText: "Comenzar un trabajo", isCorrect: false },
+            { answerText: "Para poder patear", isCorrect: false },
+            {
+                answerText: "Para poder colocar la cadera correctamente sin perjudicar la rodilla",
+                isCorrect: true,
+            },
+            { answerText: "Para mejorar la preparacion de las técnicas", isCorrect: false },
+            { answerText: "Falso. No debe ir girado", isCorrect: false },
         ],
     },
     {
-        questionText: "¿Qué debo hacer si una técnica no me sale?",
+        questionText:
+            "Cuándo hablamos de concentración en la teoría del poder, ¿a qué nos referimos?",
+        answerOptions: [
+            { answerText: "A concentrarnos en los trabajos", isCorrect: false },
+            { answerText: "A concentrarnos en las indicaciones del profesor", isCorrect: false },
+            { answerText: "A realizar las técnicas usando una superficie pequeña de nuestras manos o pies al golpear", isCorrect: true },
+            { answerText: "A concentrarnos en nuestros estudios", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿En dónde aplicarías más el elemento concentración de la teoría del poder?",
+        answerOptions: [
+            { answerText: "En una rotura", isCorrect: true },
+            { answerText: "En lucha de torneo", isCorrect: false },
+            { answerText: "Al hacer ejercicios físicos como lagartijas, abdominales, etc.", isCorrect: false },
+            { answerText: "Al realizar estiramientos", isCorrect: false },
+        ],
+    },
+    {
+        questionText: 'Si el competidor rojo realiza dos patadas al cabezal, y el competidor azul tres golpes de puño y una patada a zona media, ¿Quién gana?',
+        answerOptions: [
+            { answerText: "El competidor rojo", isCorrect: true },
+            { answerText: "El competidor azul", isCorrect: false },
+            { answerText: "Empatan", isCorrect: false },
+            { answerText: "El competidor rojo es descalificado por golpear el cabezal", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "¿Cuál de estas opciones sobre patadas saltando es falsa?",
         answerOptions: [
             {
-                answerText: "Buscar excusas para no tener que hacerla",
+                answerText: "Las patadas saltando pueden usarse en torneos",
                 isCorrect: false,
             },
             {
-                answerText: "Seguir practicándola exactamente igual",
+                answerText: "En el momento del golpe ambos pies deben estar en el aire",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Pensar la razón por la que no me sale y corregir ese detalle",
+                    "Luego de realizar la patada, la posición en la que caigas no importa",
                 isCorrect: true,
             },
-            { answerText: "Intentar no tener que hacerla", isCorrect: false },
+            { answerText: "Se pueden usar para hacer roturas", isCorrect: false },
         ],
     },
     {
-        questionText: "Cuál de estás opciones es falsa?",
+        questionText: "Llega un nuevo cinturón blanco a la clase y te toca entrenar con él. Tú: ",
         answerOptions: [
             {
-                answerText: "Saju Makgi tiene 8 movimientos",
+                answerText: "Le demuestras que eres más avanzado ganándole siempre",
                 isCorrect: false,
             },
             {
-                answerText: "La yop chagi no debe usarse en lucha",
+                answerText: "No le hablas mucho ya que eres más avanzado y el todavía no sabe Taekwon-Do",
                 isCorrect: false,
             },
             {
                 answerText:
-                    "Todas las formas empiezan y terminan en el mismo lugar",
-                isCorrect: false,
+                    "Lo ayudas a que aprenda de a poco. Disminuyes tu nivel si es necesario para que ambos puedan entrenar cómodos",
+                isCorrect: true,
             },
             {
-                answerText: "La insignia del dobok se usa del lado derecho",
-                isCorrect: true,
+                answerText: "Le avisas al profesor que se equivocó al ponerte con él. ¡Que sabon distraído!",
+                isCorrect: false,
             },
         ],
     },
