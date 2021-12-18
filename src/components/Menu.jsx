@@ -28,11 +28,6 @@ const Menu = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/#about">
-                                <i className="fas fa-building" /> About
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
                             <NavLink className="nav-link" to="/selector">
                                 <i className="fas fa-random" /> Selector de
                                 formas

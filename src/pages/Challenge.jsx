@@ -1,80 +1,100 @@
-import React, { useState, useEffect } from "react";
-import GetChallenge from "@components/GetChallenge";
+import React, { useState } from "react";
+import ChallengeItem from "@components/ChallengeItem";
+import ChallengeCounter from "@components/ChallengeCounter";
 
-import desafios from "@scripts/challenges.js";
+const challengeList = [
+    { text: "6 puntos con dollyo", points: 2, completed: false },
+    { text: "dos blitz", points: 2, completed: false },
+    {
+        text: "la combinacion puño, puño, puño, dolyo 2 veces",
+        points: 3,
+        completed: false,
+    },
+    { text: "3 puntos con una patada zona alta", points: 3, completed: false },
+];
 
 const Challenge = (props) => {
-    const [puntosTotales, setPuntosTotales] = useState(
-        JSON.parse(localStorage.getItem("puntosTotales"))
-    );
-    const [desafio, setDesafio] = useState(desafios.renderOnScreen());
-    //const [desafio, setDesafio] = useState(<GetChallenge />);
+    const [challenges, setChallenges] = useState(challengeList);
 
-    //setDesafio(setInterval("Hola"), 10000);
-    // useEffect(() => {
-    //     console.log("Hola");
-    // }, [desafio]);
+    const completedChallenges = challenges.filter(
+        (challenge) => !!challenge.completed
+    ).length;
+    const totalChallenges = challenges.length;
+    const challengesPointsTotal = challenges
+        .filter((challenge) => !!challenge.completed)
+        .reduce((acc, challenge) => acc + challenge.points, 0);
 
-    const hola = () => {
-        return console.log("Hola");
+    const onCompleteChallenge = (text) => {
+        const challengeIndex = challenges.findIndex(
+            (challenge) => challenge.text === text
+        );
+        const newChallenges = [...challenges];
+        newChallenges[challengeIndex].completed =
+            !newChallenges[challengeIndex].completed;
+        setChallenges(newChallenges);
     };
 
-    const choose = () => {
-        desafios.elegirChallenge();
-        setDesafio(desafios.renderOnScreen());
-        setPuntosTotales(JSON.parse(localStorage.getItem("puntosTotales")));
+    const onDeleteChallenge = (text) => {
+        const challengeIndex = challenges.findIndex(
+            (challenge) => challenge.text === text
+        );
+        const newChallenges = [...challenges];
+        newChallenges.splice(challengeIndex, 1);
+        setChallenges(newChallenges);
     };
-
-    //<GetChallenge hola={hola}/>;
 
     return (
         <>
             <section>
-                <div className="container">
-                    <p
-                        className="text-center fs-5 mt-3 text-white"
-                        id="puntos"
-                    />
-                    {puntosTotales}
-                    <div className="container">
-                        <div className="row  justify-content-center    ">
-                            <button
-                                type="button"
-                                className="btn btn-lg btn-dark mt-3 "
-                                onClick={() => choose()}
-                            >
-                                Dame un desafío
-                            </button>
+                <div className="d-flex flex-column min-vh-100">
+                    <div className="container text-center mt-3 ">
+                        <ChallengeCounter
+                            total={totalChallenges}
+                            points={challengesPointsTotal}
+                            completed={completedChallenges}
+                        />
+                        <div className="text-dark">
+                            {challenges.map((challenge) => (
+                                <ChallengeItem
+                                    key={challenge.text}
+                                    text={challenge.text}
+                                    points={challenge.points}
+                                    completed={challenge.completed}
+                                    onComplete={() =>
+                                        onCompleteChallenge(challenge.text)
+                                    }
+                                    onDelete={() =>
+                                        onDeleteChallenge(challenge.text)
+                                    }
+                                />
+                            ))}
                         </div>
                     </div>
-                </div>
 
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-8 offset-2">
-                            <p
-                                className="text-center fs-3 mt-2"
-                                id="result"
-                            ></p>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-8 offset-2">
+                                <p
+                                    className="text-center fs-3 mt-2"
+                                    id="result"
+                                ></p>
+                            </div>
                         </div>
+                        <div>what</div>
                     </div>
-                    <div>{desafio}</div>
-                </div>
-                <div className="container-fluid">
-                    <div className="col-md-8"></div>
-                </div>
-                <div className="container-fluid mt-5">
-                    <p className="text-center fs-6 mt-5 text-danger">
-                        <b>
-                            <a
-                                className="badge bg-danger"
-                                onClick={() => resetPoints}
-                            >
-                                Reiniciar puntos
-                            </a>{" "}
-                            (esta opción no se puede deshacer)
-                        </b>
-                    </p>
+                    <div className="container-fluid mt-2">
+                        <p className="text-center fs-6 text-danger">
+                            <b>
+                                <a
+                                    className="badge bg-danger"
+                                    onClick={() => resetPoints}
+                                >
+                                    Reiniciar puntos
+                                </a>
+                                (esta opción no se puede deshacer)
+                            </b>
+                        </p>
+                    </div>
                 </div>
             </section>
         </>
