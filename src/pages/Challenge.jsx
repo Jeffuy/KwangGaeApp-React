@@ -2,40 +2,22 @@ import React, { useState } from "react";
 import ChallengeItem from "@components/challenges/ChallengeItem";
 import ChallengeCounter from "@components/challenges/ChallengeCounter";
 import { challengesList } from "@scripts/data/challengeList";
+import useLocalStorage from "@hooks/useLocalStorage";
 
-// const ChallengeList = [
-//     { text: "6 puntos con dollyo", points: 2, completed: false },
-//     { text: "dos blitz", points: 2, completed: false },
-//     {
-//         text: "la combinacion puño, puño, puño, dolyo 2 veces",
-//         points: 3,
-//         completed: false,
-//     },
-//     { text: "3 puntos con una patada zona alta", points: 3, completed: false },
-// ];
+const Challenge = () => {
+    const [
+        challenges,
+        saveChallenges,
+        ,
+		restartChallenges,
+    ] = useLocalStorage("activeChallenges", []);
 
-const Challenge = (props) => {
-    const localStorageChallenges = localStorage.getItem("activeChallenges");
-    const localStoragePoints = localStorage.getItem("totalPoints");
-    let parsedChallenges;
-    let parsedPoints;
-
-    if (!localStorageChallenges) {
-        localStorage.setItem("activeChallenges", JSON.stringify([]));
-        parsedChallenges = [];
-    } else {
-        parsedChallenges = JSON.parse(localStorageChallenges);
-    }
-
-    if (!localStoragePoints) {
-        localStorage.setItem("totalPoints", 0);
-        parsedPoints = 0;
-    } else {
-        parsedPoints = JSON.parse(localStoragePoints);
-    }
-
-    const [challenges, setChallenges] = useState(parsedChallenges);
-    const [totalPoints, setTotalPoints] = useState(parsedPoints);
+    const [
+        totalPoints,
+        ,
+        savePoints,
+		restartPoints
+    ] = useLocalStorage("totalPoints", 0);
 
     const completedChallenges = challenges.filter(
         (challenge) => !!challenge.completed
@@ -71,33 +53,14 @@ const Challenge = (props) => {
     const getChallenge = () => {
         let random = Math.floor(Math.random() * challengesList.length);
         let challenge = challengesList[random];
-		while (challenges.some((item) => item.text === challenge.text)) {
-			random = Math.floor(Math.random() * challengesList.length);
-			challenge = challengesList[random];
-		}
-        const newParsed = [...parsedChallenges];
+        while (challenges.some((item) => item.text === challenge.text)) {
+            random = Math.floor(Math.random() * challengesList.length);
+            challenge = challengesList[random];
+        }
+        const newParsed = [...challenges];
         newParsed.push(challenge);
         saveChallenges(newParsed);
-        // localStorage.setItem('activeChallenges', JSON.stringify(challenge));
     };
-
-    const saveChallenges = (newParsed) => {
-        localStorage.setItem("activeChallenges", JSON.stringify(newParsed));
-        setChallenges(newParsed);
-    };
-
-    const savePoints = (points) => {
-        let newPoints = totalPoints + points;
-        localStorage.setItem("totalPoints", newPoints);
-        setTotalPoints(newPoints);
-    };
-
-	const restartGame = () => {
-		localStorage.setItem("totalPoints", 0);
-		localStorage.setItem("activeChallenges", JSON.stringify([]));
-		setTotalPoints(0);
-		setChallenges([]);
-	}
 
     return (
         <>
@@ -152,7 +115,7 @@ const Challenge = (props) => {
                             <b>
                                 <a
                                     className="badge bg-danger"
-                                    onClick={restartGame}
+                                    onClick={() => {restartChallenges(), 		restartPoints()}}
                                 >
                                     REINICIAR TODO
                                 </a>
