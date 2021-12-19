@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import style from "@styles/quiz.css";
 import { questionList } from "@scripts/data/quizQuestions";
-import QuizChooser from "@components/QuizChooser";
-import SelectedQuestions from "@components/SelectedQuestions";
+import QuizChooser from "@components/quiz/QuizChooser";
+import SelectedQuestions from "@components/quiz/SelectedQuestions";
 import { imgList, imgTitle } from "@scripts/data/quizImg";
 
 const Quiz = (props) => {

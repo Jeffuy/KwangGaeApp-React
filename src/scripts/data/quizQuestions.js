@@ -27,10 +27,10 @@ const questionsWhite = [
         ],
     },
     {
-        questionText: "¿Cuántos nudos lleva el cinto del dobok?",
+        questionText: "¿Cuántos vueltas lleva el cinto del dobok?",
         answerOptions: [
-            { answerText: "1", isCorrect: false },
-            { answerText: "2", isCorrect: true },
+            { answerText: "1", isCorrect: true },
+            { answerText: "2", isCorrect: false },
             { answerText: "3", isCorrect: false },
             { answerText: "Todos los que pueda", isCorrect: false },
         ],
