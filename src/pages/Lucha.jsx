@@ -1,86 +1,41 @@
 import React, { useState } from "react";
 import timer from "@scripts/timer";
-import deductPoints from "@scripts/lucha";
+import FigthButtons from "@components/lucha/FigthButtons";
+import FightNotStartedError from "@components/lucha/FightNotStartedError";
+import FightTime from "@components/lucha/FightTime";
+import FightResults from "@components/lucha/FightResults";
+import useScoreHook from "@hooks/useScoreHook";
 
 const Lucha = () => {
-    const theError = (
-        <div
-            className="card mb-4 text-center text-black"
-            style={{ borderRadius: "0.3rem" }}
-        >
-            <div className="card-body">
-                <p>DEBES APRETAR START PARA EMPEZAR A PUNTUAR</p>
-                <a
-                    className="btn btn-danger"
-                    onClick={() => setShowError(false)}
-                >
-                    Ok
-                </a>
-            </div>
-        </div>
-    );
-
     const [time, setTime] = useState("Presiona Start");
     const [isRunning, setIsRunning] = useState("Combate sin iniciar");
     const [showError, setShowError] = useState(false);
     const [runTime, setRunTime] = useState("");
     const [status, setStatus] = useState(false);
-    const [red, setRed] = useState({
-        score: 0,
-        last: 0,
-        warnings: 0,
-        discounts: 0,
-    });
 
-    const lastRed = () => {
-        if (status && red.last != -1) {
-            setRed({ ...red, score: red.score - red.last, last: 0 });
-        } else if (status && red.last == -1)
-            setRed({
-                ...red,
-                score: red.score + 1,
-                last: 0,
-                discounts: red.discounts - 1,
-            });
-    };
+    const [red, lastRed, redScore, redWarning, redRestart, redFinalScore] =
+        useScoreHook({
+            score: 0,
+            last: 0,
+            warnings: 0,
+            discounts: 0,
+        });
 
-    const [blue, setBlue] = useState({
-        score: 0,
-        last: 0,
-        warnings: 0,
-        discounts: 0,
-    });
-
-    const lastBlue = () => {
-        if (status && blue.last != -1) {
-            setBlue({ ...blue, score: blue.score - blue.last, last: 0 });
-        } else if (status && blue.last == -1)
-            setBlue({
-                ...blue,
-                score: blue.score + 1,
-                last: 0,
-                discounts: blue.discounts - 1,
-            });
-    };
+    const [blue, lastBlue, blueScore, blueWarning, blueRestart, blueFinalScore] =
+        useScoreHook({
+            score: 0,
+            last: 0,
+            warnings: 0,
+            discounts: 0,
+        });
 
     const startFight = () => {
         timer.start();
         setIsRunning("Combate iniciado");
         setStatus(true);
 
-        setBlue({
-            score: 0,
-            last: 0,
-            warnings: 0,
-            discounts: 0,
-        });
-
-        setRed({
-            score: 0,
-            last: 0,
-            warnings: 0,
-            discounts: 0,
-        });
+        blueRestart();
+        redRestart();
 
         const updateTime = () => {
             const time = timer.write();
@@ -90,8 +45,8 @@ const Lucha = () => {
     };
 
     const endFight = () => {
-        red.score = red.score - deductPoints(red.warnings);
-        blue.score = blue.score - deductPoints(blue.warnings);
+        blueFinalScore()
+        redFinalScore()
 
         setStatus(false);
         setIsRunning("Combate finalizado");
@@ -102,235 +57,28 @@ const Lucha = () => {
         console.log(red, blue);
     };
 
-    const pruebita = () => {
-        console.log("hola");
-    };
-
     return (
         <section>
-            <div className="container">
-                <h3 className="mt-2 text-center text-white" id="status">
-                    {isRunning}
-                </h3>
-            </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-6">
-                        <p
-                            className="text-center text-white"
-                            style={{ fontSize: 30, backgroundColor: "red" }}
-                        >
-                            {!status && red.score}
-                        </p>
-                    </div>
-                    <div className="col-6">
-                        <p
-                            className="text-center text-white"
-                            style={{ fontSize: 30, backgroundColor: "blue" }}
-                        >
-                            {!status && blue.score}
-                        </p>
-                    </div>
-                </div>
-                <div className="container">{showError == 1 && theError}</div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-6 mb-2">
-                            <div className="btn-group-vertical">
-                                <button
-                                    className="btn btn-danger btn-lg btn-block mt-3 mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setRed({
-                                                  ...red,
-                                                  score: red.score + 1,
-                                                  last: 1,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Golpe de puño
-                                </button>
-                                <button
-                                    className="btn btn-danger btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setRed({
-                                                  ...red,
-                                                  score: red.score + 2,
-                                                  last: 2,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Patada zona media
-                                </button>
-                                <button
-                                    className="btn btn-danger btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setRed({
-                                                  ...red,
-                                                  score: red.score + 3,
-                                                  last: 3,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Patada zona alta
-                                </button>
-                                <button
-                                    className="btn btn-danger btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setRed({
-                                                  ...red,
-                                                  warnings: red.warnings + 1,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Advertencia
-                                </button>
-                                <button
-                                    className="btn btn-danger btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setRed({
-                                                  ...red,
-                                                  score: red.score - 1,
-                                                  last: -1,
-                                                  discounts: red.discounts + 1,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Punto en contra
-                                </button>
-                                <button
-                                    className="btn btn-danger btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => lastRed()}
-                                >
-                                    Deshacer último
-                                </button>
-                                <button
-                                    className="btn btn-dark btn-lg btn-block mt-3 mb-1 shadow-none"
-                                    type="button"
-                                    onClick={
-                                        status ? undefined : () => startFight()
-                                    }
-                                >
-                                    Start
-                                </button>
-                            </div>
-                        </div>
-                        <div className="col-6 mb-2">
-                            <div className="btn-group-vertical">
-                                <button
-                                    className="btn btn-primary btn-lg btn-block mt-3 mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setBlue({
-                                                  ...blue,
-                                                  score: blue.score + 1,
-                                                  last: 1,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Golpe de puño
-                                </button>
-                                <button
-                                    className="btn btn-primary btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setBlue({
-                                                  ...blue,
-                                                  score: blue.score + 2,
-                                                  last: 2,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Patada zona media
-                                </button>
-                                <button
-                                    className="btn btn-primary btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setBlue({
-                                                  ...blue,
-                                                  score: blue.score + 3,
-                                                  last: 3,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Patada zona alta
-                                </button>
-                                <button
-                                    className="btn btn-primary btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setBlue({
-                                                  ...blue,
-                                                  warnings: blue.warnings + 1,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Advertencia
-                                </button>
-                                <button
-                                    className="btn btn-primary btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => {
-                                        status
-                                            ? setBlue({
-                                                  ...blue,
-                                                  score: blue.score - 1,
-                                                  last: -1,
-                                                  discounts: blue.discounts + 1,
-                                              })
-                                            : setShowError(true);
-                                    }}
-                                >
-                                    Punto en contra
-                                </button>
-                                <button
-                                    className="btn btn-primary btn-lg btn-block mb-2 shadow-none"
-                                    type="button"
-                                    onClick={() => lastBlue()}
-                                >
-                                    Deshacer último
-                                </button>
-                                <button
-                                    className="btn btn-dark btn-lg btn-block mt-3 mb-1 shadow-none"
-                                    type="button"
-                                    onClick={() => endFight()}
-                                >
-                                    End
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="text-center row mb-5 text-white">
-                        <div className="col-12">
-                            <span style={{ fontSize: 20 }}>{time}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <FightResults
+                isRunning={isRunning}
+                status={status}
+                red={red}
+                blue={blue}
+            />
+            {showError && <FightNotStartedError setShowError={setShowError} />}
+            <FigthButtons
+                startFight={startFight}
+                endFight={endFight}
+                status={status}
+                lastRed={lastRed}
+                lastBlue={lastBlue}
+                setShowError={setShowError}
+                redScore={redScore}
+                blueScore={blueScore}
+                redWarning={redWarning}
+                blueWarning={blueWarning}
+            />
+            <FightTime time={time} />
         </section>
     );
 };
