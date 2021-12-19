@@ -3,6 +3,7 @@ import "@styles/challenges.css";
 
 const ChallengeItem = (props) => {
     return (
+		
         <li className="TodoItem">
             <span
                 className={`Icon Icon-check ${

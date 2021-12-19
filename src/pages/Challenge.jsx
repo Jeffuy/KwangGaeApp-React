@@ -3,21 +3,19 @@ import ChallengeItem from "@components/challenges/ChallengeItem";
 import ChallengeCounter from "@components/challenges/ChallengeCounter";
 import { challengesList } from "@scripts/data/challengeList";
 import useLocalStorage from "@hooks/useLocalStorage";
+import ChallengeGet from "@components/challenges/ChallengeGet";
+import ChallengeRestart from "@components/challenges/ChallengeRestart";
 
 const Challenge = () => {
-    const [
-        challenges,
-        saveChallenges,
-        ,
-		restartChallenges,
-    ] = useLocalStorage("activeChallenges", []);
+    const [challenges, saveChallenges, , restartChallenges] = useLocalStorage(
+        "activeChallenges",
+        []
+    );
 
-    const [
-        totalPoints,
-        ,
-        savePoints,
-		restartPoints
-    ] = useLocalStorage("totalPoints", 0);
+    const [totalPoints, , savePoints, restartPoints] = useLocalStorage(
+        "totalPoints",
+        0
+    );
 
     const completedChallenges = challenges.filter(
         (challenge) => !!challenge.completed
@@ -64,66 +62,29 @@ const Challenge = () => {
 
     return (
         <>
-            <section>
-                <div className="d-flex flex-column min-vh-100">
-                    <div className="container text-center mt-3 ">
-                        <ChallengeCounter
-                            total={totalChallenges}
-                            points={totalPoints}
-                            completed={completedChallenges}
-                        />
-                        <div className="text-dark">
-                            {challenges.map((challenge) => (
-                                <ChallengeItem
-                                    key={challenge.text}
-                                    text={challenge.text}
-                                    points={challenge.points}
-                                    completed={challenge.completed}
-                                    onComplete={() =>
-                                        onCompleteChallenge(challenge.text)
-                                    }
-                                    onDelete={() =>
-                                        onDeleteChallenge(challenge.text)
-                                    }
-                                />
-                            ))}
-                        </div>
-                    </div>
+            <section className="container d-flex flex-column min-vh-100">
+                <ChallengeCounter
+                    total={totalChallenges}
+                    points={totalPoints}
+                    completed={completedChallenges}
+                />
 
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-8 offset-2">
-                                <p
-                                    className="text-center fs-3 mt-2"
-                                    id="result"
-                                ></p>
-                            </div>
-                        </div>
-                        <div className="container mt-3">
-                            <div className="row">
-                                <button
-                                    className="btn btn-primary btn-lg"
-                                    onClick={getChallenge}
-                                >
-                                    DAME UN DESAFÍO
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="container-fluid mt-5">
-                        <p className="text-center fs-6 text-danger">
-                            <b>
-                                <a
-                                    className="badge bg-danger"
-                                    onClick={() => {restartChallenges(), 		restartPoints()}}
-                                >
-                                    REINICIAR TODO
-                                </a>
-                                (esta opción no se puede deshacer)
-                            </b>
-                        </p>
-                    </div>
-                </div>
+                {challenges.map((challenge) => (
+                    <ChallengeItem
+                        key={challenge.text}
+                        text={challenge.text}
+                        points={challenge.points}
+                        completed={challenge.completed}
+                        onComplete={() => onCompleteChallenge(challenge.text)}
+                        onDelete={() => onDeleteChallenge(challenge.text)}
+                    />
+                ))}
+
+                <ChallengeGet getChallenge={getChallenge} />
+                <ChallengeRestart
+                    restartChallenges={restartChallenges}
+                    restartPoints={restartPoints}
+                />
             </section>
         </>
     );
