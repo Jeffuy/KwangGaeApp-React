@@ -1,28 +1,46 @@
 import React, { useState } from "react";
-import ChallengeItem from "@components/ChallengeItem";
-import ChallengeCounter from "@components/ChallengeCounter";
+import ChallengeItem from "@components/challenges/ChallengeItem";
+import ChallengeCounter from "@components/challenges/ChallengeCounter";
+import { challengesList } from "@scripts/data/challengeList";
 
-const challengeList = [
-    { text: "6 puntos con dollyo", points: 2, completed: false },
-    { text: "dos blitz", points: 2, completed: false },
-    {
-        text: "la combinacion puño, puño, puño, dolyo 2 veces",
-        points: 3,
-        completed: false,
-    },
-    { text: "3 puntos con una patada zona alta", points: 3, completed: false },
-];
+// const ChallengeList = [
+//     { text: "6 puntos con dollyo", points: 2, completed: false },
+//     { text: "dos blitz", points: 2, completed: false },
+//     {
+//         text: "la combinacion puño, puño, puño, dolyo 2 veces",
+//         points: 3,
+//         completed: false,
+//     },
+//     { text: "3 puntos con una patada zona alta", points: 3, completed: false },
+// ];
 
 const Challenge = (props) => {
-    const [challenges, setChallenges] = useState(challengeList);
+    const localStorageChallenges = localStorage.getItem("activeChallenges");
+    const localStoragePoints = localStorage.getItem("totalPoints");
+    let parsedChallenges;
+    let parsedPoints;
+
+    if (!localStorageChallenges) {
+        localStorage.setItem("activeChallenges", JSON.stringify([]));
+        parsedChallenges = [];
+    } else {
+        parsedChallenges = JSON.parse(localStorageChallenges);
+    }
+
+    if (!localStoragePoints) {
+        localStorage.setItem("totalPoints", 0);
+        parsedPoints = 0;
+    } else {
+        parsedPoints = JSON.parse(localStoragePoints);
+    }
+
+    const [challenges, setChallenges] = useState(parsedChallenges);
+    const [totalPoints, setTotalPoints] = useState(parsedPoints);
 
     const completedChallenges = challenges.filter(
         (challenge) => !!challenge.completed
     ).length;
     const totalChallenges = challenges.length;
-    const challengesPointsTotal = challenges
-        .filter((challenge) => !!challenge.completed)
-        .reduce((acc, challenge) => acc + challenge.points, 0);
 
     const onCompleteChallenge = (text) => {
         const challengeIndex = challenges.findIndex(
@@ -31,7 +49,14 @@ const Challenge = (props) => {
         const newChallenges = [...challenges];
         newChallenges[challengeIndex].completed =
             !newChallenges[challengeIndex].completed;
-        setChallenges(newChallenges);
+
+        const points = newChallenges[challengeIndex].points;
+        saveChallenges(newChallenges);
+        if (newChallenges[challengeIndex].completed) {
+            savePoints(points);
+        } else {
+            savePoints(-points);
+        }
     };
 
     const onDeleteChallenge = (text) => {
@@ -40,8 +65,39 @@ const Challenge = (props) => {
         );
         const newChallenges = [...challenges];
         newChallenges.splice(challengeIndex, 1);
-        setChallenges(newChallenges);
+        saveChallenges(newChallenges);
     };
+
+    const getChallenge = () => {
+        let random = Math.floor(Math.random() * challengesList.length);
+        let challenge = challengesList[random];
+		while (challenges.some((item) => item.text === challenge.text)) {
+			random = Math.floor(Math.random() * challengesList.length);
+			challenge = challengesList[random];
+		}
+        const newParsed = [...parsedChallenges];
+        newParsed.push(challenge);
+        saveChallenges(newParsed);
+        // localStorage.setItem('activeChallenges', JSON.stringify(challenge));
+    };
+
+    const saveChallenges = (newParsed) => {
+        localStorage.setItem("activeChallenges", JSON.stringify(newParsed));
+        setChallenges(newParsed);
+    };
+
+    const savePoints = (points) => {
+        let newPoints = totalPoints + points;
+        localStorage.setItem("totalPoints", newPoints);
+        setTotalPoints(newPoints);
+    };
+
+	const restartGame = () => {
+		localStorage.setItem("totalPoints", 0);
+		localStorage.setItem("activeChallenges", JSON.stringify([]));
+		setTotalPoints(0);
+		setChallenges([]);
+	}
 
     return (
         <>
@@ -50,7 +106,7 @@ const Challenge = (props) => {
                     <div className="container text-center mt-3 ">
                         <ChallengeCounter
                             total={totalChallenges}
-                            points={challengesPointsTotal}
+                            points={totalPoints}
                             completed={completedChallenges}
                         />
                         <div className="text-dark">
@@ -80,16 +136,25 @@ const Challenge = (props) => {
                                 ></p>
                             </div>
                         </div>
-                        <div>what</div>
+                        <div className="container mt-3">
+                            <div className="row">
+                                <button
+                                    className="btn btn-primary btn-lg"
+                                    onClick={getChallenge}
+                                >
+                                    DAME UN DESAFÍO
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div className="container-fluid mt-2">
+                    <div className="container-fluid mt-5">
                         <p className="text-center fs-6 text-danger">
                             <b>
                                 <a
                                     className="badge bg-danger"
-                                    onClick={() => resetPoints}
+                                    onClick={restartGame}
                                 >
-                                    Reiniciar puntos
+                                    REINICIAR TODO
                                 </a>
                                 (esta opción no se puede deshacer)
                             </b>
