@@ -1,27 +1,13 @@
-//DEFINO LAS LISTAS DE FORMAS
-const formas = [
-    "Chon-Ji",
-    "Dangun",
-    "Dosan",
-    "Won Hyo",
-    "Yulgok",
-    "Joon Gun",
-    "Toi Gye",
-    "Hwarang",
-    "Choong Moo",
-];
-
-// Formas por separado
-const formasPrimero = ["Kwang Gae", "Po Eun", "Gae Baek"];
-const formasSegundo = ["Eu Iam", "Juche", "Choong Jang"];
-const formasTercero = ["Yoo Sin", "Choi Jong", "Sam Il"];
-const formasCuarto = ["Moon Moo", "Ul Ji", "Yon Gae"];
-
-// Formas Unidas
-const formasGupPrimero = formas.concat(formasPrimero);
-const formasPriSegundo = formasGupPrimero.concat(formasSegundo);
-const formasPriSegTercero = formasPriSegundo.concat(formasTercero);
-const formasPriSegTerCuarto = formasPriSegTercero.concat(formasCuarto);
+import {
+    formasGupPrimero,
+    formasPriSegundo,
+    formasPriSegTercero,
+    formasPriSegTerCuarto,
+    formasPrimero,
+    formasSegundo,
+    formasTercero,
+    formasCuarto,
+} from "./data/patternsList";
 
 // DEFINO LA LISTA A UTILIZAR
 function grado() {
@@ -61,7 +47,6 @@ function soloGrado() {
 function elegirFormas() {
     const lista = grado();
     const listaSoloGrado = soloGrado();
-    //const result = document.getElementById("result");
     const cantidad = document.querySelector(
         'input[name="cantidad"]:checked'
     ).value;
@@ -79,17 +64,13 @@ function elegirFormas() {
 
     if (cantidad == 2) {
         eleccion = lista[random];
-        //result.innerText = `La forma elegida es ${eleccion}`;
     } else if (cantidad == 3) {
         eleccion = `${lista[random]} y ${lista[random2]}`;
-        //result.innerText = `Las formas elegidas son ${eleccion}`;
     } else if (cantidad == 4) {
         eleccion = `${lista[random]} , ${lista[random2]} y ${lista[random3]}`;
-        //result.innerText = `Las formas elegidas son ${eleccion}`;
     } else if (cantidad == 0) {
         random = Math.floor(Math.random() * listaSoloGrado.length);
         eleccion = `${listaSoloGrado[random]}`;
-        //result.innerText = `La forma elegida es ${eleccion}`;
     } else if (cantidad == 1) {
         random = Math.floor(Math.random() * listaSoloGrado.length);
         while (listaSoloGrado[random] == lista[random2]) {
@@ -97,23 +78,8 @@ function elegirFormas() {
             random2 = Math.floor(Math.random() * lista.length);
         }
         eleccion = `${listaSoloGrado[random]} y ${lista[random2]}`;
-        //result.innerText = `Las formas elegidas son ${eleccion}`;
     }
     return eleccion;
 }
 
-export default {
-    formas,
-    formasPrimero,
-    formasSegundo,
-    formasTercero,
-    formasCuarto,
-    formasGupPrimero,
-    formasPriSegundo,
-    formasPriSegTercero,
-    formasPriSegTerCuarto,
-    grado,
-    soloGrado,
-    elegirFormas,
-};
-
+export default elegirFormas;
