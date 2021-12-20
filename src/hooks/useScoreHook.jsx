@@ -26,28 +26,36 @@ function useScoreHook(initialValue) {
         } else {
             setItem({ ...item, score: item.score + points, last: points });
         }
+        console.log(item);
     };
 
     const addWarning = () => {
         setItem({ ...item, warnings: item.warnings + 1 });
     };
 
-	const itemFinalScore = () => {
-		let minusPoints = 0;
-	
-		for (let i = 0; i < item.warnings; i++) {
-			if (i % 3 == 0) {
-				minusPoints += 1;
-			}
-		}
-		addPoints(-minusPoints);
-	}
+    const itemFinalScore = () => {
+        let minusPoints = 0;
 
-	const restartScore = () => {
-		setItem(initialValue)
-	}
+        for (let i = 0; i < item.warnings; i++) {
+            if (i % 3 == 0) {
+                minusPoints += 1;
+            }
+        }
+        addPoints(-minusPoints);
+    };
 
-    return [item, lastItem, addPoints, addWarning, restartScore, itemFinalScore];
+    const restartScore = () => {
+        setItem(initialValue);
+    };
+
+    return [
+        item,
+        lastItem,
+        addPoints,
+        addWarning,
+        restartScore,
+        itemFinalScore,
+    ];
 }
 
 export default useScoreHook;

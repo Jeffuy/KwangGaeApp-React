@@ -40,7 +40,7 @@ const Menu = () => {
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/forma">
+                            <NavLink className="nav-link" to="/pattern">
                                 <i className="fas fa-calculator" /> Arbitraje de
                                 Forma
                             </NavLink>
