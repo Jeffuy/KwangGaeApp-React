@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import timer from "@scripts/timer";
-import FigthButtons from "@components/lucha/FigthButtons";
-import FightNotStartedError from "@components/lucha/FightNotStartedError";
-import FightTime from "@components/lucha/FightTime";
-import FightResults from "@components/lucha/FightResults";
+import FigthButtons from "@components/fight/FigthButtons";
+import FightNotStartedError from "@components/fight/FightNotStartedError";
+import FightTime from "@components/fight/FightTime";
+import FightResults from "@components/fight/FightResults";
 import useScoreHook from "@hooks/useScoreHook";
 
-const Lucha = () => {
+const Fight = () => {
     const [time, setTime] = useState("Presiona Start");
     const [isRunning, setIsRunning] = useState("Combate sin iniciar");
     const [showError, setShowError] = useState(false);
@@ -83,4 +83,4 @@ const Lucha = () => {
     );
 };
 
-export default Lucha;
+export default Fight;
