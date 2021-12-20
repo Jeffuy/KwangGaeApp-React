@@ -7,15 +7,8 @@ body {
 }
 
 .logo {
-	height: 300px;
-	width: 300px;
+	height: 275px;
+	width: 275px;
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-
-/*.save_button {
-	min-width: 80px;
-	max-width: 80px;
-	min-height: 80px;
-	max-height: 80px;
-}*/

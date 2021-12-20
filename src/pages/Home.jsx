@@ -17,10 +17,10 @@ const Home = () => {
                     </div>
                 </header>
             </div>
-            <div className="container-fluid" id="about">
+            <div className="container-fluid">
                 <div className="row bg-dark text-white p-5 text-center">
                     <div className="col-sm-6">
-                        <i className="fas fa-mobile-alt fa-10x" />
+                        <i className="fas fa-mobile-alt fa-5x" />
                     </div>
                     <div className="col-sm-6 pt-4">
                         <h3>La aplicación de Kwang-Gae</h3>
