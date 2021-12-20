@@ -2,8 +2,8 @@ import React from "react";
 
 const FightTime = ({ time }) => {
     return (
-        <div className="text-center row mb-5 text-white">
-            <div className="col-12">
+        <div className="container text-center row mb-5 text-white">
+            <div className="col">
                 <span style={{ fontSize: 20 }}>{time}</span>
             </div>
         </div>
