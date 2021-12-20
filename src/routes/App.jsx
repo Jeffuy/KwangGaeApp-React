@@ -15,7 +15,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/selector" element={<PatternSelector />} />
-                    
+
                     <Route path="/lucha" element={<Fight />} />
                     <Route path="/desafios" element={<Challenge />} />
 					<Route path="/quiz" element={<Quiz />} />
