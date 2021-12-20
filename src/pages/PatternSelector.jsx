@@ -5,7 +5,7 @@ import SelectorOptionsQuantity from "@components/selector/SelectorOptionsQuantit
 import SelectorChooseButton from "@components/selector/SelectorChooseButton";
 import SelectorResults from "@components/selector/SelectorResults";
 
-const SelectorFormas = () => {
+const PatternSelector = () => {
 
     const [formas, setFormas] = useState("");
 
@@ -29,4 +29,4 @@ const SelectorFormas = () => {
     );
 };
 
-export default SelectorFormas;
+export default PatternSelector;
