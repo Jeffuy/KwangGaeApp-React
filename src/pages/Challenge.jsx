@@ -17,11 +17,6 @@ const Challenge = () => {
         0
     );
 
-    const completedChallenges = challenges.filter(
-        (challenge) => !!challenge.completed
-    ).length;
-    const totalChallenges = challenges.length;
-
     const onCompleteChallenge = (text) => {
         const challengeIndex = challenges.findIndex(
             (challenge) => challenge.text === text
@@ -64,9 +59,8 @@ const Challenge = () => {
         <>
             <section className="container d-flex flex-column min-vh-100">
                 <ChallengeCounter
-                    total={totalChallenges}
+                    challenges={challenges}
                     points={totalPoints}
-                    completed={completedChallenges}
                 />
 
                 {challenges.map((challenge) => (

@@ -14,7 +14,7 @@ const ChallengeGet = ({ getChallenge }) => {
 			<div className="container mt-3">
 				<div className="row">
 					<button
-						className="btn btn-primary btn-lg"
+						className="btn btn-primary btn-lg btn-special"
 						onClick={getChallenge}
 					>
 						DAME UN DESAFÍO

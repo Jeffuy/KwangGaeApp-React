@@ -1,9 +1,15 @@
 import React from "react";
 
-const ChallengeCounter = ({ total, completed, points }) => {
+const ChallengeCounter = ({ challenges, points }) => {
+
+	const completedChallenges = challenges.filter(
+        (challenge) => !!challenge.completed
+    ).length;
+    const totalChallenges = challenges.length;
+
     return (
         <h2 className="text-center mt-3 ">
-            Completado: <b>{completed}</b> de <b>{total}</b> desafíos. <br /> Puntos totales: <b>{points}</b>.
+            Completado: <b>{completedChallenges}</b> de <b>{totalChallenges}</b> desafíos. <br /> Puntos totales: <b>{points}</b>.
         </h2>
     );
 };

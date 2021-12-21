@@ -3,26 +3,25 @@ import "@styles/challenges.css";
 
 const ChallengeItem = (props) => {
     return (
-		
-        <li className="TodoItem">
-            <span
-                className={`Icon Icon-check ${
+        <li className="TodoItem ">
+            <i
+                className={`Icon Icon-check fas fa-check-circle fa-2x ${
                     props.completed && "Icon-check--active"
                 }`}
                 onClick={props.onComplete}
-            >
-                √
-            </span>
+            ></i>
             <p
                 className={`TodoItem-p ${
                     props.completed && "TodoItem-p--complete"
                 }`}
             >
-                Haz <b>{props.text}</b> para ganar <b>{props.points} puntos.</b>
+                Haz <b>{props.text}</b> para sumar <b>{props.points} puntos.</b>
             </p>
 
-            <span className="Icon Icon-delete"
-			onClick={props.onDelete}>X</span>
+            <i
+                className="fas fa-trash-alt fa-2x Icon-delete"
+                onClick={props.onDelete}
+            ></i>
         </li>
     );
 };
