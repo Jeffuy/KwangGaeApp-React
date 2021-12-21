@@ -73,4 +73,8 @@ background: linear-gradient(90deg, rgba(25,135,84,1) 71%, rgba(13,110,253,1) 74%
 	background: linear-gradient(90deg, rgba(220,53,69,1) 71%, rgba(33,37,41,1) 74%);
 }
 
+.card-special {
+	border-radius: 25px;
+}
+
 

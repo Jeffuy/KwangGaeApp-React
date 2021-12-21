@@ -4,7 +4,7 @@ const SelectorChooseButton = ({ choose }) => {
     return (
         <div className="container-fluid text-center">
             <button
-                className="btn  btn-dark btn-lg mt-5"
+                className="btn  btn-dark btn-lg mt-5 card-special"
                 type="button"
                 onClick={choose}
             >

@@ -3,8 +3,8 @@ import React from "react";
 const SelectorOptionsQuantity = () => {
     return (
         <div className="col text-center text-white">
-            <div className="card bg-dark">
-                <div className="card-body">
+            <div className="card bg-dark  card-special ">
+                <div className="card-body ">
                     <h3>Cantidad</h3>
                     <br />
                     <div className="form-check">

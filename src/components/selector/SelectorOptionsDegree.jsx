@@ -3,7 +3,7 @@ import React from "react";
 const SelectorOptionsDegree = () => {
     return (
         <div className="col text-center text-white">
-            <div className="card bg-dark ">
+            <div className="card bg-dark card-special">
                 <div className="card-body">
                     <h3 className="text-center">Grado</h3>
                     <br />
