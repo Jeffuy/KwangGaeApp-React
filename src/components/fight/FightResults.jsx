@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import { FightContext } from "@context/FightContext";
 
 const FightResults = () => {
-    const { isRunning, status, red, blue } = useContext(FightContext);
+    const { status, red, blue } = useContext(FightContext);
 
     return (
         <>
             <div className="container">
-                <h3 className="mt-2 text-center text-white">{isRunning}</h3>
+                <h3 className="mt-2 text-center text-white">{status ? "Combate Iniciado" : "Combate Finalizado"}</h3>
             </div>
             <div className="container">
                 <div className="row">

@@ -6,7 +6,6 @@ const FightContext = createContext();
 
 function FightProvider(props) {
     const [time, setTime] = useState("Presiona Start");
-    const [isRunning, setIsRunning] = useState("Combate sin iniciar");
     const [showError, setShowError] = useState(false);
     const [runTime, setRunTime] = useState("");
     const [status, setStatus] = useState(false);
@@ -15,7 +14,7 @@ function FightProvider(props) {
         item: red,
         lastItem: lastRed,
         addPoints: redScore,
-        addWaring: redWarning,
+        addWarning: redWarning,
         restartScore: redRestart,
         itemFinalScore: redFinalScore,
     } = useScoreHook({
@@ -41,7 +40,6 @@ function FightProvider(props) {
 
     const startFight = () => {
         timer.start();
-        setIsRunning("Combate iniciado");
         setStatus(true);
 
         blueRestart();
@@ -59,7 +57,6 @@ function FightProvider(props) {
         redFinalScore();
 
         setStatus(false);
-        setIsRunning("Combate finalizado");
         setRunTime(clearInterval(runTime));
         setTime(time);
         timer.reset();
@@ -71,7 +68,6 @@ function FightProvider(props) {
         <FightContext.Provider
             value={{
                 time,
-                isRunning,
                 showError,
                 startFight,
                 endFight,
