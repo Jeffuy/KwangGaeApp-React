@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ChallengesContext } from "@context/ChallengesContext";
 
-const ChallengeCounter = ({ challenges, points }) => {
+const ChallengeCounter = () => {
+
+	const { challenges, totalPoints } = useContext(ChallengesContext);
 
 	const completedChallenges = challenges.filter(
         (challenge) => !!challenge.completed
@@ -9,7 +12,7 @@ const ChallengeCounter = ({ challenges, points }) => {
 
     return (
         <h2 className="text-center mt-3 ">
-            Completado: <b>{completedChallenges}</b> de <b>{totalChallenges}</b> desafíos. <br /> Puntos totales: <b>{points}</b>.
+            Completado: <b>{completedChallenges}</b> de <b>{totalChallenges}</b> desafíos. <br /> Puntos totales: <b>{totalPoints}</b>.
         </h2>
     );
 };

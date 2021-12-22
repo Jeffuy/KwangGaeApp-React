@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ChallengesContext } from "@context/ChallengesContext";
 
-const ChallengeRestart = ({ restartChallenges, restartPoints }) => {
+
+const ChallengeRestart = () => {
+
+	const { restartChallenges, restartPoints } = useContext(ChallengesContext);
     return (
         <div className="container-fluid mt-5">
             <div className="row">

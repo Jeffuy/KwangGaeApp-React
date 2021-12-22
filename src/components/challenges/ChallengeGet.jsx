@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ChallengesContext } from "@context/ChallengesContext";
 
-const ChallengeGet = ({ getChallenge }) => {
+const ChallengeGet = () => {
+
+	const { getChallenge } = useContext(ChallengesContext);
+
 	return (
 		<div className="container-fluid">
 			<div className="row">

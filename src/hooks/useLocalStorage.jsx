@@ -29,7 +29,7 @@ function useLocalStorage(itemName, initialValue) {
 
     const [item, setItems] = useState(parsedItem);
 
-    return [item, saveItem, saveItemPoints, restartItem];
+    return {item, saveItem, saveItemPoints, restartItem};
 }
 
 export default useLocalStorage;

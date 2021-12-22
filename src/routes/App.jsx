@@ -9,6 +9,7 @@ import Quiz from "@pages/Quiz";
 import Pattern from "@pages/Pattern";
 
 
+
 const App = () => {
     return (
         <BrowserRouter>
