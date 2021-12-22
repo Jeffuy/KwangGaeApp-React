@@ -1,21 +1,25 @@
-import React from "react";
+import React, {useContext} from "react";
+import {QuizContext} from "@context/QuizContext";
+
 
 const SelectedQuestions = (props) => {
-    if (props.questions != null) {
+
+	const { titleChanger, imgList, score, showScore, questions, currentQuestionNumber, handleAnswerOptionClick, back } = useContext(QuizContext);
+    if (questions != null) {
         return (
             <div className="container">
-                {props.showScore ? (
+                {showScore ? (
                     <>
                         <div className="app">
                             <div className="row">
                                 <img
                                     className="img-fluid pb-4"
-                                    src={props.titleChanger()}
+                                    src={titleChanger()}
                                     alt=""
                                 />
                                 <img
                                     className="img-fluid"
-                                    src={props.imgList[props.score]}
+                                    src={imgList[score]}
                                     alt=""
                                 />
                             </div>
@@ -24,12 +28,12 @@ const SelectedQuestions = (props) => {
                             <div className="row">
                                 <div className="col">
                                     <div className="text-center fs-2">
-                                        Tu puntaje fue de {props.score} sobre{" "}
-                                        {props.questions.length}
+                                        Tu puntaje fue de {score} sobre{" "}
+                                        {questions.length}
                                     </div>
                                     <button
                                         className="btn btn-dark form-control mt-4 mb-4"
-                                        onClick={() => props.back()}
+                                        onClick={() => back()}
                                     >
                                         Volver
                                     </button>
@@ -44,29 +48,29 @@ const SelectedQuestions = (props) => {
                                 <div className="row">
                                     <div className="col">
                                         <span className="fs-4">
-                                            Pregunta {props.currentQuestionNumber + 1}
+                                            Pregunta {currentQuestionNumber + 1}
                                         </span>
-                                        /{props.questions.length}
+                                        /{questions.length}
                                     </div>
                                     <div className="row">
                                         <div className="col text-center mt-2 fs-4">
                                             {
-                                                props.questions[
-                                                    props.currentQuestionNumber
+                                                questions[
+                                                    currentQuestionNumber
                                                 ].questionText
                                             }
                                         </div>
                                     </div>
                                 </div>
                                 <div className="answer-section mt-4">
-                                    {props.questions[
-                                        props.currentQuestionNumber
+                                    {questions[
+                                        currentQuestionNumber
                                     ].answerOptions.map((answerOption) => (
                                         <button
                                             className="btn btn-dark mt-3"
                                             key={answerOption.answerText}
                                             onClick={() =>
-                                                props.handleAnswerOptionClick(
+                                                handleAnswerOptionClick(
                                                     answerOption.isCorrect
                                                 )
                                             }
