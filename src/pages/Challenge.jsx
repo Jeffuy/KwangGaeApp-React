@@ -1,13 +1,13 @@
 import React from "react";
-import Challenge from "../containers/ChallengeContainer";
+import ChallengeContainer from "../containers/ChallengeContainer";
 import { ChallengesProvider } from "@context/ChallengesContext";
 
-function Prueba() {
+function Challenge() {
     return (
         <ChallengesProvider>
-            <Challenge />
+            <ChallengeContainer />
         </ChallengesProvider>
     );
 }
 
-export default Prueba;
+export default Challenge;

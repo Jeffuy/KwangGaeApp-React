@@ -16,20 +16,20 @@ function useLocalStorage(itemName, initialValue) {
         setItems(newItem);
     };
 
-	const saveItemPoints = (points) => {
+    const saveItemPoints = (points) => {
         let newPoints = item + points;
         localStorage.setItem(itemName, newPoints);
         setItems(newPoints);
     };
 
-	const restartItem = () => {
+    const restartItem = () => {
         localStorage.setItem(itemName, initialValue);
         setItems(initialValue);
     };
 
     const [item, setItems] = useState(parsedItem);
 
-    return {item, saveItem, saveItemPoints, restartItem};
+    return { item, saveItem, saveItemPoints, restartItem };
 }
 
 export default useLocalStorage;

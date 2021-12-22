@@ -5,7 +5,7 @@ import ChallengeCounter from "@components/challenges/ChallengeCounter";
 import ChallengeGet from "@components/challenges/ChallengeGet";
 import ChallengeRestart from "@components/challenges/ChallengeRestart";
 
-const Challenge = () => {
+const ChallengeContainer = () => {
     const {
         challenges,
         onCompleteChallenge,
@@ -35,4 +35,4 @@ const Challenge = () => {
     );
 };
 
-export default Challenge;
+export default ChallengeContainer;

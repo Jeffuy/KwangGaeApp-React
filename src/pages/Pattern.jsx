@@ -8,12 +8,12 @@ import PatternLevelThree from "@components/pattern/PatternLevelThree";
 import useScoreHook from "@hooks/useScoreHook";
 
 const Pattern = () => {
-    const [red, redLast, redScore, , restartRed ] = useScoreHook({
+    const {item: red, lastItem: redLast, addPoints: redScore, restartScore: restartRed } = useScoreHook({
         score: 10,
         last: 0,
     });
 
-    const [blue, blueLast, blueScore, , restartBlue] = useScoreHook({
+    const {item: blue, lastItem: blueLast, addPoints: blueScore, restartScore: restartBlue} = useScoreHook({
         score: 10,
         last: 0,
     });

@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FightContext } from "@context/FightContext";
 
-const FightResults = ({ isRunning, status, red, blue }) => {
+const FightResults = () => {
+    const { isRunning, status, red, blue } = useContext(FightContext);
+
     return (
         <>
             <div className="container">
@@ -9,22 +12,22 @@ const FightResults = ({ isRunning, status, red, blue }) => {
             <div className="container">
                 <div className="row">
                     <div className="col-6">
-					<div
+                        <div
                             className="text-center text-white"
                             style={{ fontSize: 30, backgroundColor: "red" }}
                         >
                             <p>{!status && red.score}</p>
-							{!status && red.score > blue.score && (
-                            <p
-                                style={{
-                                    fontSize: 15,
-                                    backgroundColor: "red",
-									marginTop: "-22px",
-                                }}
-                            >
-                                Winner!
-                            </p>
-                        )}
+                            {!status && red.score > blue.score && (
+                                <p
+                                    style={{
+                                        fontSize: 15,
+                                        backgroundColor: "red",
+                                        marginTop: "-22px",
+                                    }}
+                                >
+                                    Winner!
+                                </p>
+                            )}
                         </div>
                     </div>
                     <div className="col-6">
@@ -33,20 +36,18 @@ const FightResults = ({ isRunning, status, red, blue }) => {
                             style={{ fontSize: 30, backgroundColor: "blue" }}
                         >
                             <p>{!status && blue.score}</p>
-							{!status && blue.score > red.score && (
-                            <p
-                                style={{
-                                    fontSize: 15,
-                                    backgroundColor: "blue",
-									marginTop: "-22px",
-                                }}
-                            >
-                                Winner!
-                            </p>
-                        )}
+                            {!status && blue.score > red.score && (
+                                <p
+                                    style={{
+                                        fontSize: 15,
+                                        backgroundColor: "blue",
+                                        marginTop: "-22px",
+                                    }}
+                                >
+                                    Winner!
+                                </p>
+                            )}
                         </div>
-
-                        
                     </div>
                 </div>
             </div>

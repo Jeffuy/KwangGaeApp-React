@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FightContext } from "@context/FightContext";
 
-const FightNotStartedError = ({ setShowError }) => {
+const FightNotStartedError = () => {
+
+	const { setShowError } = useContext(FightContext);
     return (
         <div className="container">
             <div

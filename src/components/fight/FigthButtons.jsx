@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FightContext } from "@context/FightContext";
 
-const FigthButtons = ({
-    status,
-    setShowError,
-    lastRed,
-    lastBlue,
-    startFight,
-    endFight,
-    redScore,
-    blueScore,
-    redWarning,
-    blueWarning,
-}) => {
+const FigthButtons = () => {
+    const {
+        status,
+        setShowError,
+        lastRed,
+        lastBlue,
+        startFight,
+        endFight,
+        redScore,
+        blueScore,
+        redWarning,
+        blueWarning,
+    } = useContext(FightContext);
+
     return (
-		
         <div className="container">
             <div className="row">
                 <div className="col-6 mb-2">

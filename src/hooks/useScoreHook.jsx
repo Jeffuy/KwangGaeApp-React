@@ -48,14 +48,14 @@ function useScoreHook(initialValue) {
         setItem(initialValue);
     };
 
-    return [
+    return {
         item,
         lastItem,
         addPoints,
         addWarning,
         restartScore,
         itemFinalScore,
-    ];
+    };
 }
 
 export default useScoreHook;
