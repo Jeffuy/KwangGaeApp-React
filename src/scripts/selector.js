@@ -66,8 +66,6 @@ function elegirFormas() {
         eleccion = lista[random];
     } else if (cantidad == 3) {
         eleccion = `${lista[random]} y ${lista[random2]}`;
-    } else if (cantidad == 4) {
-        eleccion = `${lista[random]} , ${lista[random2]} y ${lista[random3]}`;
     } else if (cantidad == 0) {
         random = Math.floor(Math.random() * listaSoloGrado.length);
         eleccion = `${listaSoloGrado[random]}`;
