@@ -7,6 +7,7 @@ import Home from "@pages/Home";
 import Challenge from "@pages/Challenge";
 import Quiz from "@pages/Quiz";
 import Pattern from "@pages/Pattern";
+import MemoryGame from "@pages/MemoryGame";
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/selector" element={<PatternSelector />} />
+					<Route path="/memory" element={<MemoryGame />} />
 					<Route path="/pattern" element={<Pattern />} />
                     <Route path="/lucha" element={<Fight />} />
                     <Route path="/desafios" element={<Challenge />} />
