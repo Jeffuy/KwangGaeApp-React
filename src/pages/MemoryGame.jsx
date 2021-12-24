@@ -82,7 +82,7 @@ function App() {
     };
 
     return (
-        <div className="container d-flex flex-column min-vh-100 text-center">
+        <div className="container d-flex flex-column min-vh-100 text-center memory">
             <h1 className="mt-3">Taekwon-Do Memory</h1>
             <div className="container mt-4">
                 <button onClick={shuffleCards}>New Game</button>
