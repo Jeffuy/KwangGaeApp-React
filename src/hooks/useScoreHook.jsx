@@ -36,8 +36,8 @@ function useScoreHook(initialValue) {
     const itemFinalScore = () => {
         let minusPoints = 0;
 
-        for (let i = 0; i < item.warnings; i++) {
-            if (i % 3 == 0) {
+        for (let i = 0; i <= item.warnings; i++) {
+            if (i % 3 == 0 && i != 0) {
                 minusPoints += 1;
             }
         }
