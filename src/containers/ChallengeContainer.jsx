@@ -21,6 +21,7 @@ const ChallengeContainer = () => {
                     <ChallengeItem
                         key={challenge.text}
                         text={challenge.text}
+						type={challenge.type}
                         points={challenge.points}
                         completed={challenge.completed}
                         onComplete={() => onCompleteChallenge(challenge.text)}
